@@ -17,6 +17,7 @@ server.listen(3000, function () {
     log("Server is running on: localhost3000");
 });
 
+console.log('hello' + 'bye bye'); 
 
 
 
