@@ -25,7 +25,7 @@ This feature should atleast filter:
 
 ## Visuals
 
-These are the visuals of the filter feature.
+These are the current visuals of the filter feature.
 
 ## Code
 
