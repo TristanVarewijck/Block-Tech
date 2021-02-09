@@ -1,6 +1,13 @@
 # ActiveTogether - filter feature 
 
 ![NPM](https://img.shields.io/npm/v/npm)
+
+![Language](https://img.shields.io/github/languages/top/TristanVarewijck/Block-Tech)
+
+
+
+
+
 ## Description 
 
 I am a Communication & Multimedia Design student at the Asmterdam university of applied sciences and i am currently in me second year. 
