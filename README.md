@@ -1,8 +1,8 @@
 # ActiveTogether - filter feature 
 
-_Shields that represents my project - They change over time_
+_Shields that represent my project - They change over time_
 
-![Language](https://img.shields.io/github/languages/top/TristanVarewijck/Block-Tech) ![Activity](https://img.shields.io/github/last-commit/TristanVarewijck/Block-Tech) ![Count](https://img.shields.io/github/languages/count/TristanVarewijck/Block-Tech?color=green) ![Isseus](https://img.shields.io/github/issues/TristanVarewijck/Block-Tech) ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square) ![NPM](https://img.shields.io/npm/v/npm) ![MIT-License](https://img.shields.io/apm/l/vim-mode) ![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)
+![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/TristanVarewijck/Block-Tech) ![Isseus](https://img.shields.io/github/issues/TristanVarewijck/Block-Tech) ![Language](https://img.shields.io/github/languages/top/TristanVarewijck/Block-Tech) ![Count](https://img.shields.io/github/languages/count/TristanVarewijck/Block-Tech?color=green) ![NPM](https://img.shields.io/npm/v/npm) ![MIT-License](https://img.shields.io/apm/l/vim-mode)
 
 
 ## Description 
@@ -29,6 +29,7 @@ This feature should atleast filter:
 ## Meta
 
 Tristan Varewijck - tristan.varewijck@gmail.com - https://github.com/TristanVarewijck/Block-Tech
+![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)
 
 
 ## License
