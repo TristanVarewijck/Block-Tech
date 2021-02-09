@@ -1,6 +1,6 @@
 # ActiveTogether - filter feature 
 
-_Shields that represent my project - They change over time_
+_Shields that represent my project - They change over time._
 
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/TristanVarewijck/Block-Tech) ![Isseus](https://img.shields.io/github/issues/TristanVarewijck/Block-Tech) ![Language](https://img.shields.io/github/languages/top/TristanVarewijck/Block-Tech) ![Count](https://img.shields.io/github/languages/count/TristanVarewijck/Block-Tech?color=#a55eea) ![NPM](https://img.shields.io/npm/v/npm) ![MIT-License](https://img.shields.io/apm/l/vim-mode)
 
@@ -23,7 +23,13 @@ This feature should atleast filter:
 - Number of people
 
 
-## Screenshots
+## Visuals
+
+These are the visuals of the filter feature.
+
+## Code
+
+These are importent blocks of code to make this feature possible. 
 
 
 ## Meta
