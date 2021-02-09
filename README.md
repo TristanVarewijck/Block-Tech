@@ -4,7 +4,9 @@
 
 ![Language](https://img.shields.io/github/languages/top/TristanVarewijck/Block-Tech)
 
+![Activity](https://img.shields.io/github/commit-activity/m/TristanVarewijck/Block-Tech?color=green)
 
+![Count](https://img.shields.io/github/languages/count/TristanVarewijck/Block-Tech?color=green)
 
 
 
