@@ -1,4 +1,4 @@
-# ActiveTogether - filter feature 
+<center> # ActiveTogether - filter feature <center>
 
 _Shields that represent my project - They change over time._
 
