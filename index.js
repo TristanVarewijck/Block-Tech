@@ -5,6 +5,10 @@ const app = express();
 const port = 3000;
 
 
+// statische pagina's 
+app.use(express.static('public')) 
+
+
 // Pagina's 
 app.get('/', (req, res) => {
   res.send('Hello World!')
@@ -18,14 +22,12 @@ app.get('/about', (req, res) => {
     res.send('The about page')
 });
 
-app.get('/filter', (req, res) => {
-    res.send('Filter the groups your looking for!')
-});
 
 // 404 pagina 
 app.use(function (req, res, next) {
     res.status(404).send("404 error")
 })
+
 
 // server 
 app.listen(port, () => {
