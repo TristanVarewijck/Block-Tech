@@ -1,13 +1,6 @@
 # ActiveTogether - filter feature 
 
-![NPM](https://img.shields.io/npm/v/npm)
-
-![Language](https://img.shields.io/github/languages/top/TristanVarewijck/Block-Tech)
-
-![Activity](https://img.shields.io/github/commit-activity/m/TristanVarewijck/Block-Tech?color=green)
-
-![Count](https://img.shields.io/github/languages/count/TristanVarewijck/Block-Tech?color=green)
-
+![NPM](https://img.shields.io/npm/v/npm) ![Language](https://img.shields.io/github/languages/top/TristanVarewijck/Block-Tech) ![Activity](https://img.shields.io/github/commit-activity/m/TristanVarewijck/Block-Tech?color=green) ![Count](https://img.shields.io/github/languages/count/TristanVarewijck/Block-Tech?color=green) ![Isseus](https://img.shields.io/github/issues/TristanVarewijck/Block-Tech) ![MIT-License](https://img.shields.io/apm/l/vim-mode) ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square) ![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)
 
 
 ## Description 
