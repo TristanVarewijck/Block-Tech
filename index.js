@@ -8,7 +8,6 @@ const port = 3000;
 // statische pagina's 
 app.use(express.static('public')) 
 
-
 // Pagina's 
 app.get('/', (req, res) => {
   res.send('Hello World!')
