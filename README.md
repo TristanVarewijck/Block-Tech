@@ -27,6 +27,9 @@ This feature should atleast filter:
 
 These are the current visuals of the filter feature.
 
+![homescreen ui](https://github.com/TristanVarewijck/Block-Tech/blob/master/images/design-homepage.png)
+![filter ui](https://github.com/TristanVarewijck/Block-Tech/blob/master/images/design-filter.png)
+
 ## Code
 
 These are importent blocks of code to make this feature possible. 
