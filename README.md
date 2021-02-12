@@ -12,7 +12,16 @@ For this block (block-web) I have the case to build a feature for a matching-app
 The groups you can join have limitations: activities, duration, date, location and number of people. If you joined a group, you have find your 'match' and hopefully have a good time! In this project i am going to make a filter feature where people can based there group on or can find a group with. For the making of this feature we will be using back-end and front-end tools. 
 
 ## Table of Contents
-<a name="Used Tools"/>
+- [Install](#install)
+- [Feature requirements](#feature-requirements)
+- [Used Tools](#used-tools)
+- [Visuals](#visuals)
+- [Code](#code)
+- [Meta](#meta)
+- [License](#license)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 
 
 ## Install
