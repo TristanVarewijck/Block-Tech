@@ -3,13 +3,14 @@ const express = require('express');
 const app = express();
 const port = 3000;
 const path = require('path');
+const pug = require('pug') 
 
 app.set("view engine", "pug");
 app.set("views", path.join(__dirname, "views"));
 
-router.get("/", function(req, res) {
-    res.send('index');
-})
+router.get("/", (req, res) => {
+  res.render("index");
+});
 
 
 // statische pagina's 
