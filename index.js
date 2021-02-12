@@ -8,9 +8,13 @@ const pug = require('pug')
 app.set("view engine", "pug");
 app.set("views", path.join(__dirname, "views"));
 
-router.get("/", (req, res) => {
-  res.render("index");
-});
+app.get('/',  (req, res) => {
+  res.render('index', { title: 'index', message: 'Hello there!' })
+})
+
+app.get('/',  (req, res) => {
+  res.render('filter', { title: 'filter', message: 'Hello there!' })
+})
 
 
 // statische pagina's 
@@ -28,9 +32,9 @@ router.get("/", (req, res) => {
 
 
 // server 
-//app.listen(port, () => {
- // console.log(`Example app listening on port ${port}!`)
-//});
+app.listen(port, () => {
+console.log(`Example app listening on port ${port}!`)
+});
 
 
 
