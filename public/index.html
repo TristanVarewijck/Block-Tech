@@ -3,9 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
 <body>
-    <h1> hello world!</h1>
+
+    <nav>
+        <div>home
+        </div>
+        <ul>
+        <li>Saved</li>
+        <li>Profile</li>
+        </ul>
+    </nav>
+
+    <header>
+    <h1>Discover Events</h1>
+    <h2>Stay active Together</h2>
+    </header>
+
+    <main>
+        <section>
+            <form>
+                <input type="text" placeholder="Find events...">
+                <button>filters</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>126 available Events</h2>
+            
+            <!-- background image article -->
+            <article>
+                <h1>walk in the park</h1>
+                <h2>activity: walking</h2>
+                <ul>
+                    <li>6/20</li>
+                    <li>Amsterdam Vondelpark</li>
+                    <li>2 hours</li>
+                    <li>5 april 2021</li>
+                </ul>
+                <a href="#">More Information!</a>
+            </article>
+            </section>
+
+            <footer>
+                <a href="#">Settings</a>
+                <button>Make Group</button>
+                <a href="#">Messages</a>
+            </footer>
+
+            <section class="filteren">
+                <header>
+                    <ul>
+                        <li><button>Sluiten</button></li>
+                        <li><h2>Filters</h2></li>
+                        <li><button>Reset</button></li>
+                    </ul>
+                </header>
+
+                <form class="filters" ></form>
+                <label for="activities">activities</label>
+                <select id="activities" name="activities">
+                    <option>Cycling</option>
+                    <option>Walking</option>
+                    <option>Jogging</option>
+                    <option>Fishing</option>
+                </select>
+                
+                <label for="date">Date</label>
+                <input type="date" id="date" name="date">
+
+                <label for="distance">Distance</label>
+                <input type="range" id="distance" name="distance">
+
+                <button> Apply Filter</button>
+            </section>
+
+        
+    </main>
 </body>
 </html>
