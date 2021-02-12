@@ -1,5 +1,55 @@
-html
-  head
-    title= title
-  body
-    h1= message
+doctype html
+include includes/head.pug
+
+body
+nav
+  ul
+    li Saved
+    li Profile
+  div.home
+    | home
+header
+  h1 Discover Events
+  h2 Stay active Together
+main
+  section
+    form
+      input(type='text' placeholder='Find events...')
+      button filters
+  section
+    h2 #{results} available Events
+    
+    // background image article
+    article
+      h1 walk in the park
+      h2 activity: walking
+      ul
+        li= groupMembers
+        li Amsterdam Vondelpark
+        li 2 hours
+        li 5 april 2021
+      a(href='#') More Information!
+      include includes/footer.pug
+  
+  // filter-page
+  section.filteren
+    header
+      ul
+        li
+          button Sluiten
+        li
+          h2 Filters
+        li
+          button Reset
+    form.filters
+    label(for='activities') activities
+    select#activities(name='activities')
+      option Cycling
+      option Walking
+      option Jogging
+      option Fishing
+    label(for='date') Date
+    input#date(type='date' name='date')
+    label(for='distance') Distance
+    input#distance(type='range' name='distance')
+    button  Apply Filter

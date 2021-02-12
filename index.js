@@ -12,27 +12,27 @@ app.set("views", path.join(__dirname, "views"));
 
 // pug files 
 app.get('/',  (req, res) => {
-  res.render('index', { title: 'ActiveTogether'})
+  res.render('index', { 
+    title: 'ActiveTogether',
+    results: 126,
+    activitys: ['cycling', 'walking', 'jogging', 'fishing'],
+    saved: 0,
+    groupMembers: "6/20"
+  })
 })
 
-app.get('/',  (req, res) => {
-  res.render('filter', { 
-    title: 'Filter' })
+app.get('/settings',  (req, res) => {
+  res.render('settings', { 
+    title: 'settings' })
 })
 
 // statische pagina's 
  app.use(express.static('public')) 
 
-// Pagina's 
- app.get('/filter', (req, res) => {
- res.send('Hello World!')
- });
-
 // 404 pagina 
  app.use(function (req, res, next) {
  res.status(404).send("404 error")
 })
-
 
 // server 
 app.listen(port, () => {
