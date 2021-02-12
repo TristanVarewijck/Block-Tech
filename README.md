@@ -12,6 +12,8 @@ For this block (block-web) I have the case to build a feature for a matching-app
 The groups you can join have limitations: activities, duration, date, location and number of people. If you joined a group, you have find your 'match' and hopefully have a good time! In this project i am going to make a filter feature where people can based there group on or can find a group with. For the making of this feature we will be using back-end and front-end tools. 
 
 ## Table of Contents
+<a name="Used Tools"/>
+
 
 ## Install
 
