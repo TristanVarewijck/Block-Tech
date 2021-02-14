@@ -4,17 +4,17 @@ include includes/head.pug
 body
 nav
   ul
-    li Saved
-    li Profile
+    li <ion-icon name="heart"></ion-icon>
+    li 
   div.home
 header
   h1 Discover Events
   h2 Stay active Together
 main
   section
-    form
+    form.search
       input(type='text' placeholder='Find events...')
-      button filters
+      button.filter-button <ion-icon name="options"></ion-icon>
   section
     h2.results #{results} available Events
     
@@ -29,9 +29,12 @@ main
         li 2 hours
         li 5 april 2021
       a(href='#') More Information!
+  script
 
     // footer
 include includes/footer.pug
    
   // filter-page
 include includes/filter.pug
+
+<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
