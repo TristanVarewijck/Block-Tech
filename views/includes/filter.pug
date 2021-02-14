@@ -1,0 +1,21 @@
+section.filteren
+    header
+      ul
+        li
+          button Sluiten
+        li
+          h2 Filters
+        li
+          button Reset
+    form.filters
+    label(for='activities') activities
+    select#activities(name='activities')
+      option Cycling
+      option Walking
+      option Jogging
+      option Fishing
+    label(for='date') Date
+    input#date(type='date' name='date')
+    label(for='distance') Distance
+    input#distance(type='range' name='distance')
+    button  Apply Filter
