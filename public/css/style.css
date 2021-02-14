@@ -137,20 +137,15 @@ header:first-of-type h1{
 
 /* search */ 
 
-section:first-of-type{
+section:nth-of-type(1) form{
     position: relative;
     left: 15%;
     margin-top: 2em;
     width:100%;
-
-}
-
-
-section:first-of-type form {
     text-align: center;
     width: 100%; 
     display: flex;
-    
+
 }
 
 
@@ -184,7 +179,7 @@ section:nth-of-type(2) {
 
 article {
     position: relative;
-    background-color: black;
+    background-color: rgb(73, 72, 72);
     background-size: contain;
     position: absolute;
     width: 75%;
@@ -254,6 +249,16 @@ footer a:nth-of-type(2){
     background-color: #F53B57; 
     color: white;
     padding: 1em;
+}
+
+/* filter */ 
+
+.filteren{
+    position: absolute;
+    background-color: white; 
+    bottom:0; 
+    top: 0;
+    color: black;
 }
 
 
