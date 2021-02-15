@@ -22,6 +22,12 @@ The groups you can join have limitations: activities, duration, date, location a
 
 ## Install
 
+`git clone https://github.com/TristanVarewijck/Block-Tech`
+
+`git pull`
+
+`npm start` 
+
 ## Feature requirements
 
 This feature should atleast filter: 
