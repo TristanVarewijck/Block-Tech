@@ -110,7 +110,7 @@ div.home{
 
 /* header*/ 
 
-header:first-of-type{
+header{
     position: relative;
     /* flex-box */ 
     display: flex;
@@ -129,7 +129,7 @@ nav ul li:nth-of-type(2){
     border-radius: 50%;
 }
 
-header:first-of-type h1{
+header h1{
     color: #00A8FF;
     font-size: 1.5em;
     font-weight: 600;
@@ -152,7 +152,7 @@ header:first-of-type h1{
         background-color: white;
         font-size: 1.8em;
         border:none;
-       
+        margin-top: 1px;
     }
 
 
@@ -190,7 +190,7 @@ article {
     position: absolute;
     width: 75%;
     height: 28em;
-    top: 60%; right: 50%;
+    top: 61%; right: 50%;
     transform: translate(50%,-50%);
     border-radius: 10px;
     color: white;
@@ -290,8 +290,8 @@ footer a:nth-of-type(2){
 
 /* form */ 
 .filters{
-    margin-left: 3em;
-    width: 75%; 
+    margin-left: 2.5em;
+    width: 100%; 
 }
 
 label{
@@ -303,11 +303,16 @@ label{
 }
 
 .filters input, select {
-    width: 100%; 
+    width: 25em;
     height: 3em;
     border: solid 1px #D6D6D6;
     border-radius: 5px; 
     background-color: white;
+}
+
+.filteren button:nth-of-type(3) {
+    position: absolute; 
+    bottom: 0; 
 }
 
 

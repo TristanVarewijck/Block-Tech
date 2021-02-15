@@ -2,7 +2,7 @@ section.filteren
   nav
     ul
       li
-        button.filterHide Sluiten
+        button Sluiten
       li
         h2 Filters
       li
@@ -17,5 +17,18 @@ section.filteren
     label(for='date') Date
     input#date(type='date', name='date')
     label(for='distance') Distance
-    input#distance(type='range', name='distance')
+    input#distance(type='range', name='distance', min='0', max='50', step='10')
+    label(for='attendence') Attendence
+    select#attendence(name='attendence')
+      option 0-10 people
+      option 10-20 people
+      option 20-30 people
+      option 30-40 people
+      option 40 + people
+    label(for='duration') duration
+    select#duration(name='duration')
+      option 0.5 - 1 hour
+      option 1 - 2 hours
+      option 2 - 3 hours
+      option 3 + hours
   button  apply filters 
