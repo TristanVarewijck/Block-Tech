@@ -5,6 +5,11 @@ const port = 3000;
 const path = require('path');
 const pug = require('pug') 
 
+
+// statische pagina's
+app.use(express.static('public'))
+
+
 // pug setup
 app.set("view engine", "pug");
 app.set("views", path.join(__dirname, "views"));
@@ -21,18 +26,18 @@ app.get('/',  (req, res) => {
   })
 })
 
+
 app.get('/settings',  (req, res) => {
   res.render('settings', { 
     title: 'settings' })
 })
-
-// statische pagina's 
- app.use(express.static('public')) 
+  
 
 // 404 pagina 
  app.use(function (req, res, next) {
  res.status(404).send("404 error")
 })
+
 
 // server 
 app.listen(port, () => {

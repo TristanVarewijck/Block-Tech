@@ -80,7 +80,7 @@ a{
 }
 
 /* nav */ 
-nav ul{
+body > nav ul{
     display: flex;
     justify-content: flex-end;
 }
@@ -88,11 +88,6 @@ nav ul{
 nav ul li{
     margin: 1em .5em 0 0;
     font-size: 1.2em;
-}
-
-nav ul li:first-of-type{
-    color: #F53B57;
-
 }
 
 div.home{
@@ -122,7 +117,8 @@ header{
     margin-bottom: 1em;  
 }
 
-nav ul li:nth-of-type(2){
+
+header nav ul li:nth-of-type(2){
     background-color: #00A8FF;
     width: 1em; 
     height: 1em;
@@ -148,11 +144,11 @@ header h1{
 }
 
 .search button{
-        color: #1E272E;
+        color: #00A8FF;
         background-color: white;
         font-size: 1.8em;
         border:none;
-        margin-top: 1px;
+
     }
 
 
@@ -260,36 +256,51 @@ footer a:nth-of-type(2){
 
 /* filter */ 
 
- .filteren{
+ .filters-hidden{
     position: absolute;
     background-color: white; 
     bottom:0; 
     top: 0;
     width: 100%; 
     color: black;
-    transform: translateY(0%);
+    transform: translateY(-100%);
+    transition: 1s;
 }
 
-.filteren-show {
+.filters-show {
     position: fixed;
-    transform:translateY(100%);
+    transform: translateY(0%);
+    
   }
 
-.filteren ul{
+.filters-hidden nav ul{
     margin-top: 2em;
     margin-bottom: 2.5em;
     display: flex;
     justify-content: space-evenly;
+    align-items: center;  
 } 
 
-.filteren h2{
-    font-size: 1.5em;
+.filters-hidden nav ul li button{
+    border:none;
+    border-radius: 5px;
+    padding: 1em;
+}
+
+.filter-hidden nav ul li:first-of-type button{
+    color:red; 
+}
+
+.filters-hidden h2{
+    font-size: 1.2em;
     font-weight: 500;
 }
 
 
+
+
 /* form */ 
-.filters{
+.form{
     margin-left: 2.5em;
     width: 100%; 
 }
@@ -302,7 +313,7 @@ label{
     display:block;  
 }
 
-.filters input, select {
+.form input, select {
     width: 25em;
     height: 3em;
     border: solid 1px #D6D6D6;
@@ -310,9 +321,21 @@ label{
     background-color: white;
 }
 
-.filteren button:nth-of-type(3) {
-    position: absolute; 
-    bottom: 0; 
+
+
+.form button{
+    position: absolute;
+    top: 90%; right: 50%;
+    transform: translate(50%,-50%);
+    border: none;
+    border-radius: 10px;
+    padding: 1em 5em 1em 5em;
+    background-color: #F53B57;
+    color: white;  
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1em;
+
 }
 
 
