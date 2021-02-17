@@ -292,7 +292,7 @@ footer a:nth-of-type(2){
 }
 
 .filters-hidden h2{
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-weight: 500;
 }
 
@@ -321,9 +321,7 @@ label{
     background-color: white;
 }
 
-
-
-.form button{
+input[type="submit"]{
     position: absolute;
     top: 90%; right: 50%;
     transform: translate(50%,-50%);
@@ -334,9 +332,7 @@ label{
     color: white;  
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
-    font-size: 1em;
-
-}
+    font-size: 1em; }
 
 
 

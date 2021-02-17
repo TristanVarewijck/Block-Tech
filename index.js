@@ -2,17 +2,17 @@
 const express = require('express');
 const app = express();
 const port = 3000;
-const path = require('path');
-const pug = require('pug') 
+// const path = require('path');
+
 
 
 // statische pagina's
-app.use(express.static('public'))
+app.use(express.static('public'));
 
 
 // pug setup
 app.set("view engine", "pug");
-app.set("views", path.join(__dirname, "views"));
+// app.set("views", path.join(__dirname, "views"));
 
 
 // pug files 
@@ -26,12 +26,6 @@ app.get('/',  (req, res) => {
   })
 })
 
-
-app.get('/settings',  (req, res) => {
-  res.render('settings', { 
-    title: 'settings' })
-})
-  
 
 // 404 pagina 
  app.use(function (req, res, next) {

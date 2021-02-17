@@ -36,14 +36,15 @@ section.filters-hidden
   nav
     ul
       li
-        button.close-filter Sluiten
+        button.close-filter Close
       li
         h2 Filters
       li
         button Reset
-  form.form
-    label(for='activities') activities
+  form.form(action='/' method='POST')
+    label(for='activities') Activities
     select#activities(name='activities')
+      option All
       option Cycling
       option Walking
       option Jogging
@@ -65,8 +66,8 @@ section.filters-hidden
       option 1 - 2 hours
       option 2 - 3 hours
       option 3 + hours
-    button  apply filters 
-  
-<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
-<script src="scripts/app.js"></script>
+    input(type='submit')
+
+script(src='/scripts/app.js')
+script(src='https://unpkg.com/ionicons@5.4.0/dist/ionicons.js')
    
