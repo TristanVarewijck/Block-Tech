@@ -21,7 +21,8 @@ time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;
+    vertical-align: baseline;
+    overflow-y: hidden;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -143,11 +144,12 @@ header h1{
     display: flex;
 }
 
-.search button{
+.filter-button{
         color: #00A8FF;
         background-color: white;
         font-size: 1.8em;
         border:none;
+        display: inline;
 
     }
 
@@ -166,7 +168,7 @@ header h1{
 
 section:nth-of-type(2) {
     margin-top: 1.5em;
-    height: 100%;
+   
 }
 
 .results {
@@ -180,9 +182,10 @@ section:nth-of-type(2) {
 /* card */ 
 
 article {
-    position: relative;
-    background-color: rgb(73, 72, 72);
-    background-size: contain;
+    background: url(/assets/card-background.jpg) rgba(0,0,0,0.9);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
     position: absolute;
     width: 75%;
     height: 28em;

@@ -2,13 +2,9 @@
 const express = require('express');
 const app = express();
 const port = 3000;
-// const path = require('path');
-
-
 
 // statische pagina's
 app.use(express.static('public'));
-
 
 // pug setup
 app.set("view engine", "pug");
@@ -25,6 +21,11 @@ app.get('/',  (req, res) => {
     groupMembers: "6/20"
   })
 })
+
+// bodyParser 
+const bodyParser = require('body-parser')
+app.use(bodyParser.json());
+app.use(express.urlencoded());
 
 
 // 404 pagina 

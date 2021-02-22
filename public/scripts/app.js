@@ -1,6 +1,6 @@
 // filter show// 
 
-let filterButton = document.querySelector(".search button");
+let filterButton = document.querySelector(".filter-button");
 
 filterButton.addEventListener("click", filterSlide); 
 
