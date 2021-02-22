@@ -22,11 +22,6 @@ app.get('/',  (req, res) => {
   })
 })
 
-// bodyParser 
-const bodyParser = require('body-parser')
-app.use(bodyParser.json());
-app.use(express.urlencoded());
-
 
 // 404 pagina 
  app.use(function (req, res, next) {
