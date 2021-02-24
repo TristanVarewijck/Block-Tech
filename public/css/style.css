@@ -339,7 +339,9 @@ input[type="submit"]{
     font-weight: 500;
     font-size: 1em; }
 
-
+output{
+    font-family: 'Poppins', sans-serif;
+}
 
 
 

@@ -34,6 +34,17 @@ main
         li 2 hours
         li 5 april 2021
       a(href='#') More Information!
+
+    article
+     div
+      h1 walk in the park
+      h2 Activity: walking
+      ul
+        li= groupMembers
+        li Amsterdam Vondelpark
+        li 2 hours
+        li 5 april 2021
+      a(href='#') More Information!
    
 include includes/footer.pug
 
@@ -57,19 +68,20 @@ section.filters-hidden
     label(for='date') Date
     input#date(type='date', name='date')
     label(for='distance') Distance
-    input#distance(type='range', name='distance', min='0', max='50', step='10')
-    abel(for='attendence') Attendence
+    input#distance(type='range', name='distance', min='0', max='50', step='10' value="0" oninput="this.nextElementSibling.value = this.value")
+    output 0
+    label(for='attendence') Attendence (max.)
     select#attendence(name='attendence')
       option 0-10 people
       option 10-20 people
       option 20-30 people
       option 30-40 people
       opltion 40 + people
-    label(for='duration') Duration
+    label(for='duration') Duration (max.)
     select#duration(name='duration')
-      option 0.5 - 1 hour
-      option 1 - 2 hours
-      option 2 - 3 hours
+      option 1 hour
+      option 2 hours
+      option 3 hours
       option 3 + hours
     input(type='submit')
 

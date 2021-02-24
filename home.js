@@ -3,6 +3,13 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const port = 3000;
+
+// settings
+app.use(bodyParser.urlencoded({​​​​​​​​
+  extended:true
+  }​​​​​​​​));
+
+// Komt later in een data base zodat je deze Data makelijk kan ophalen 
 let groups = [
   {
     "activity": "all",
@@ -30,13 +37,6 @@ let groups = [
   }
 ];
 
-
-app.use(bodyParser.urlencoded({​​​​​​​​
-  extended:true
-  }​​​​​​​​));
-
-
-    
 
 app.post('/', (req,res) => {​​​​​​​​
   const filteredGroups = groups.filter(function(group){​​​​​​​​

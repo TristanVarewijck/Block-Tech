@@ -8,41 +8,41 @@ let groups = [
     "activity": "all",
     "distance": 10,
     "members": "0-10",
-    "duration": 80
+    "duration": 1
   },
   {
     "activity": "all",
     "distance": 15,
     "members": "0-10",
-    "duration": 40
+    "duration": 3
   },
   {
     "activity": "all",
     "distance": 20,
     "members": "0-10",
-    "duration": 50
+    "duration": 2
   },
   {
     "activity": "all",
     "distance": 25,
     "members": "0-10",
-    "duration": 120
+    "duration": 2
   },
   {
     "activity": "all",
     "distance": 30,
     "members": "0-10",
-    "duration": 80
+    "duration": 1
   },
   {
     "activity": "all",
     "distance": 35,
     "members": "0-10",
-    "duration": 40
+    "duration": 3
   },
   {
     "activity": "all",
-    "distance": 40,
+    "distance": 3,
     "members": "0-10",
     "duration": 50
   },
@@ -50,7 +50,7 @@ let groups = [
     "activity": "all",
     "distance": 45,
     "members": "0-10",
-    "duration": 120
+    "duration": 1
   }
 ];
 

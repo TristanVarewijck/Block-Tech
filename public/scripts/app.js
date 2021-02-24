@@ -22,4 +22,8 @@ function filterClose(){
 }
 
 
+// range tracker 
+
+
+
 
