@@ -2,6 +2,33 @@
 const express = require('express');
 const app = express();
 const port = 3000;
+let groups = [
+  {
+    "activity": "all",
+    "distance": "10km",
+    "members": "0-10",
+    "duration": "2hours"
+  },
+  {
+    "activity": "all",
+    "distance": "10km",
+    "members": "0-10",
+    "duration": "2hours"
+  },
+  {
+    "activity": "all",
+    "distance": "10km",
+    "members": "0-10",
+    "duration": "2hours"
+  },
+  {
+    "activity": "all",
+    "distance": "10km",
+    "members": "0-10",
+    "duration": "2hours"
+  }
+];
+
 
 // statische pagina's
 app.use(express.static('public'));
