@@ -1,34 +1,58 @@
 // Met de require() method kan je javascript modules in laden. 
 const express = require('express');
+const bodyParser = require('body-parser');
 const app = express();
 const port = 3000;
 let groups = [
   {
     "activity": "all",
-    "distance": "10km",
+    "distance": 10,
     "members": "0-10",
-    "duration": "2hours"
+    "duration": 80
   },
   {
     "activity": "all",
-    "distance": "10km",
+    "distance": 15,
     "members": "0-10",
-    "duration": "2hours"
+    "duration": 40
   },
   {
     "activity": "all",
-    "distance": "10km",
+    "distance": 20,
     "members": "0-10",
-    "duration": "2hours"
+    "duration": 50
   },
   {
     "activity": "all",
-    "distance": "10km",
+    "distance": 25,
     "members": "0-10",
-    "duration": "2hours"
+    "duration": 120
+  },
+  {
+    "activity": "all",
+    "distance": 30,
+    "members": "0-10",
+    "duration": 80
+  },
+  {
+    "activity": "all",
+    "distance": 35,
+    "members": "0-10",
+    "duration": 40
+  },
+  {
+    "activity": "all",
+    "distance": 40,
+    "members": "0-10",
+    "duration": 50
+  },
+  {
+    "activity": "all",
+    "distance": 45,
+    "members": "0-10",
+    "duration": 120
   }
 ];
-
 
 // statische pagina's
 app.use(express.static('public'));
@@ -37,6 +61,9 @@ app.use(express.static('public'));
 app.set("view engine", "pug");
 // app.set("views", path.join(__dirname, "views"));
 
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
 
 // pug files 
 app.get('/',  (req, res) => {
@@ -49,10 +76,24 @@ app.get('/',  (req, res) => {
   })
 })
 
+app.post('/', (req, res) => {
+  const filteredGroups = groups.filter(function (group) {
+    return group.distance >= Number(req.body.distance)
+  })
+  
+  res.render('index', { 
+    title: 'ActiveTogether',
+    results: filteredGroups.length,
+    activitys: ['cycling', 'walking', 'jogging', 'fishing'],
+    saved: 0,
+    groupMembers: "6/20",
+    data: filteredGroups
+  })
+})
 
 // 404 pagina 
- app.use(function (req, res, next) {
- res.status(404).send("404 error")
+app.use(function (req, res, next) {
+  res.status(404).send("404 error")
 })
 
 
@@ -60,16 +101,3 @@ app.get('/',  (req, res) => {
 app.listen(port, () => {
 console.log(`Example app listening on port ${port}!`)
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
