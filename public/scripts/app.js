@@ -1,4 +1,4 @@
-// filter show// 
+// filter show
 
 let filterButton = document.querySelector(".filter-button");
 

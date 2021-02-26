@@ -61,6 +61,7 @@ app.use(express.static('public'));
 app.set("view engine", "pug");
 // app.set("views", path.join(__dirname, "views"));
 
+// settings
 app.use(bodyParser.urlencoded({
   extended: true
 }));
@@ -70,7 +71,7 @@ app.get('/',  (req, res) => {
   res.render('index', { 
     title: 'ActiveTogether',
     results: 126,
-    activitys: ['cycling', 'walking', 'jogging', 'fishing'],
+    activities: ['cycling', 'walking', 'jogging', 'fishing'],
     saved: 0,
     groupMembers: "6/20"
   })
@@ -84,7 +85,7 @@ app.post('/', (req, res) => {
   res.render('index', { 
     title: 'ActiveTogether',
     results: filteredGroups.length,
-    activitys: ['cycling', 'walking', 'jogging', 'fishing'],
+    activities: ['cycling', 'walking', 'jogging', 'fishing'],
     saved: 0,
     groupMembers: "6/20",
     data: filteredGroups
