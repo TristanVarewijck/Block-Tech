@@ -3,6 +3,8 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const app = express(); 
 const port = 3000;
+require("dotenv").config(); 
+console.log(process.env.DB_USER);
 const groups = [
   {
     activity: "all",
@@ -63,14 +65,6 @@ client.connect(err => {
   // perform actions on the collection object
   client.close();
 });
-
-// .env 
-const db = require('db')
-db.connect({
-  host: process.env.DB_HOST,
-  username: process.env.DB_USER,
-  password: process.env.DB_PASS
-})
 
 // statische pagina's
 app.use(express.static("public"));
