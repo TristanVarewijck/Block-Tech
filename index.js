@@ -1,7 +1,7 @@
 // Met de require() method kan je javascript modules in laden.
 const express = require("express");
 const bodyParser = require("body-parser");
-const app = express();
+const app = express(); 
 const port = 3000;
 const groups = [
   {
@@ -53,6 +53,24 @@ const groups = [
     duration: 1,
   },
 ];
+
+// mongodb
+const MongoClient = require('mongodb').MongoClient;
+const uri = "mongodb+srv://Tristanvrw:DB_PASS@firststart.oyitr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+client.connect(err => {
+  const collection = client.db("test").collection("devices");
+  // perform actions on the collection object
+  client.close();
+});
+
+// .env 
+const db = require('db')
+db.connect({
+  host: process.env.DB_HOST,
+  username: process.env.DB_USER,
+  password: process.env.DB_PASS
+})
 
 // statische pagina's
 app.use(express.static("public"));
