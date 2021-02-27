@@ -3,8 +3,6 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const app = express(); 
 const port = 3000;
-require("dotenv").config(); 
-console.log(process.env.DB_USER);
 const groups = [
   {
     activity: "all",
@@ -55,16 +53,6 @@ const groups = [
     duration: 1,
   },
 ];
-
-// mongodb
-const MongoClient = require('mongodb').MongoClient;
-const uri = "mongodb+srv://Tristanvrw:DB_PASS@firststart.oyitr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
-const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
-client.connect(err => {
-  const collection = client.db("test").collection("devices");
-  // perform actions on the collection object
-  client.close();
-});
 
 // statische pagina's
 app.use(express.static("public"));
