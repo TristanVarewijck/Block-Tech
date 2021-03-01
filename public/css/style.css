@@ -235,7 +235,7 @@ header h1 {
   text-align: center;
 }
 
-/* button for filtering */ 
+/* button for filtering */
 .filter-button {
   position: absolute;
   color: #00a8ff;
@@ -245,7 +245,6 @@ header h1 {
   right: 20%;
   top: 18%;
 }
-
 
 /* dynamic results (filter results text) */
 section:nth-of-type(2) {

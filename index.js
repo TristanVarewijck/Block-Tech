@@ -1,7 +1,7 @@
 // settings
 const express = require("express");
 const bodyParser = require("body-parser");
-const app = express(); 
+const app = express();
 const port = 3000;
 const groups = [
   {
@@ -78,7 +78,7 @@ app.get("/", (req, res) => {
   });
 });
 
-// form method="post" 
+// form method="post"
 app.post("/", (req, res) => {
   const filteredGroups = groups.filter(function (group) {
     return group.distance >= Number(req.body.distance);
