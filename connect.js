@@ -1,3 +1,6 @@
+// connection to mongoDB database
+// source: https://docs.atlas.mongodb.com/tutorial/connect-to-your-cluster/
+
 const { MongoClient } = require("mongodb");
  
 // Replace the following with your Atlas connection string                                                                                                                                        

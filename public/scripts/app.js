@@ -1,4 +1,4 @@
-// filter show
+// filter page show
 
 const filterButton = document.querySelector(".filter-button");
 
@@ -9,7 +9,7 @@ function filterSlide() {
   filter.classList.add("filters-show");
 }
 
-// filter gone
+// filter page hide
 
 const closeFilter = document.querySelector(".close-filter");
 
@@ -20,5 +20,3 @@ function filterClose() {
 
   filter.classList.remove("filters-show");
 }
-
-// range tracker

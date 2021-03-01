@@ -1,6 +1,8 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
+/* 
+  css preset. 
+  Source: http://meyerweb.com/eric/tools/css/reset/ 
+  v2.0 | 20110126
+  License: none (public domain)
 */
 
 html,
@@ -131,6 +133,7 @@ table {
 
 /*///////////////////////////////////////////////////////////*/
 
+/* fonts source: fonts.google.com */
 /* fonts
 font-family: 'Caveat', cursive;
 font-family: 'Lato', sans-serif;
@@ -163,7 +166,7 @@ a {
   text-decoration: none;
 }
 
-/* nav */
+/* navbar */
 body > nav ul {
   display: flex;
   justify-content: flex-end;
@@ -187,10 +190,8 @@ div.home {
 }
 
 /* header*/
-
 header {
   position: relative;
-  /* flex-box */
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -215,24 +216,13 @@ header h1 {
   line-height: 1.2em;
 }
 
-/* search */
-
+/* search (input) */
 .search {
   position: relative;
   left: 15%;
   margin-top: 2em;
   text-align: center;
   display: flex;
-}
-
-.filter-button {
-  position: absolute;
-  color: #00a8ff;
-  background-color: white;
-  font-size: 1.8em;
-  border: none;
-  right: 20%;
-  top: 18%;
 }
 
 .search input[type="text"] {
@@ -245,8 +235,19 @@ header h1 {
   text-align: center;
 }
 
-/* dynamic results */
+/* button for filtering */ 
+.filter-button {
+  position: absolute;
+  color: #00a8ff;
+  background-color: white;
+  font-size: 1.8em;
+  border: none;
+  right: 20%;
+  top: 18%;
+}
 
+
+/* dynamic results (filter results text) */
 section:nth-of-type(2) {
   margin-top: 1.5em;
 }
@@ -259,8 +260,7 @@ section:nth-of-type(2) {
   margin-left: 0;
 }
 
-/* card */
-
+/* card (groups) */
 article {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url(/assets/card-background.jpg);
@@ -314,7 +314,6 @@ article a {
 }
 
 /* footer */
-
 footer {
   position: absolute;
   bottom: 0;
@@ -323,6 +322,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-around;
+
   /* Bron: https://html-css-js.com/css/generator/box-shadow/ */
   -webkit-box-shadow: 0px -2px 6px -4px rgba(0, 0, 0, 0.3);
   box-shadow: 0px -2px 6px -4px rgba(0, 0, 0, 0.3);
@@ -340,8 +340,7 @@ footer a:nth-of-type(2) {
   border-radius: 20px;
 }
 
-/* filter */
-
+/* filter screen (filters) */
 .filters-hidden {
   position: absolute;
   background-color: white;
@@ -381,7 +380,7 @@ footer a:nth-of-type(2) {
   font-weight: 500;
 }
 
-/* form */
+/* filter form (filter inputs) */
 .form {
   margin-left: 2.5em;
   width: 100%;
@@ -419,6 +418,7 @@ input[type="submit"] {
   font-size: 1em;
 }
 
+/* output for range input */
 output {
   font-family: "Poppins", sans-serif;
 }

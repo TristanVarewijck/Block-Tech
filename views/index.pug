@@ -7,11 +7,15 @@ body
       each val in data
         li=val.distance
         li=val.members
+
+// navbar 
 nav
   ul
     li <ion-icon name="heart"></ion-icon>
     li 
   div.home
+
+// header 
 header
   h1 Discover Events
   h2 Stay active Together
@@ -23,18 +27,7 @@ main
   section
     h2.results #{results} available Events
     
-    // background image article
-    article
-     div
-      h1 walk in the park
-      h2 Activity: walking
-      ul
-        li= groupMembers
-        li Amsterdam Vondelpark
-        li 2 hours
-        li 5 april 2021
-      a(href='#') More Information!
-
+    // cards (groups)
     article
      div
       h1 walk in the park
@@ -48,6 +41,7 @@ main
    
 include includes/footer.pug
 
+// filter page 
 section.filters-hidden
   nav
     ul
@@ -57,6 +51,8 @@ section.filters-hidden
         h2 Filters
       li
         button Reset
+  
+  // filter form (inputs)
   form.form(action="/" method='POST')
     label(for='activities') Activities
     select#activities(name='activities')
@@ -86,5 +82,7 @@ section.filters-hidden
     input(type='submit')
 
 script(src='/scripts/app.js')
+
+// all used icons are from: https://ionicons.com/ and are loaden with the script below: 
 script(src='https://unpkg.com/ionicons@5.4.0/dist/ionicons.js')
    

@@ -1,7 +1,7 @@
 {
   "name": "matching-app",
   "version": "1.0.0",
-  "description": "this is a project for block-tech",
+  "description": "Project for block-tech",
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",

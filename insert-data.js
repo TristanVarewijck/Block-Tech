@@ -1,3 +1,7 @@
+
+
+// to insert data to database on MongoDB 
+// source: https://docs.atlas.mongodb.com/tutorial/insert-data-into-your-cluster/
 const { MongoClient } = require("mongodb");
  
 // Replace the following with your Atlas connection string                                                                                                                                        

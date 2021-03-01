@@ -1,4 +1,4 @@
-// Met de require() method kan je javascript modules in laden.
+// settings
 const express = require("express");
 const bodyParser = require("body-parser");
 const app = express(); 
@@ -54,21 +54,20 @@ const groups = [
   },
 ];
 
-// statische pagina's
+// static pages
 app.use(express.static("public"));
 
 // pug setup
 app.set("view engine", "pug");
-// app.set("views", path.join(__dirname, "views"));
 
-// settings
+// bodyparser setting
 app.use(
   bodyParser.urlencoded({
     extended: true,
   })
 );
 
-// pug files
+// rendered pages (pug)
 app.get("/", (req, res) => {
   res.render("index", {
     title: "ActiveTogether",
@@ -79,6 +78,7 @@ app.get("/", (req, res) => {
   });
 });
 
+// form method="post" 
 app.post("/", (req, res) => {
   const filteredGroups = groups.filter(function (group) {
     return group.distance >= Number(req.body.distance);
@@ -94,12 +94,12 @@ app.post("/", (req, res) => {
   });
 });
 
-// 404 pagina
+// 404 page
 app.use(function (req, res, next) {
   res.status(404).send("404 error");
 });
 
-// server
+// server with express
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}!`);
 });
