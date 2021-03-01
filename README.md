@@ -1,6 +1,6 @@
 # ActiveTogether - filter feature
 
-![homescreen ui](https://github.com/TristanVarewijck/Block-Tech/blob/master/images/design-homepage.png)
+![banner](https://github.com/TristanVarewijck/Block-Tech/blob/master/images/Banner%20GitHub%20READ.ME.png | width=100)
 
 
 _Shields that represent my project - They change over time._
