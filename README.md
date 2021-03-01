@@ -1,14 +1,17 @@
 # ActiveTogether - filter feature
 
+![homescreen ui](https://github.com/TristanVarewijck/Block-Tech/blob/master/images/design-homepage.png)
+
+
 _Shields that represent my project - They change over time._
 
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/TristanVarewijck/Block-Tech) ![Isseus](https://img.shields.io/github/issues/TristanVarewijck/Block-Tech) ![Language](https://img.shields.io/github/languages/top/TristanVarewijck/Block-Tech) ![Count](https://img.shields.io/github/languages/count/TristanVarewijck/Block-Tech?color=#a55eea) ![NPM](https://img.shields.io/npm/v/npm) ![MIT-License](https://img.shields.io/apm/l/vim-mode)
 
 ## Description
 
-I am a Communication & Multimedia Design student at the Asmterdam university of applied sciences and i am currently in me second year.
-For this block (block-web) I have the case to build a feature for a matching-app. The app is a app where people can make groups or find groups to join.
-The groups you can join have limitations: activities, duration, date, location and number of people. If you joined a group, you have find your 'match' and hopefully have a good time! In this project i am going to make a filter feature where people can based there group on or can find a group with. For the making of this feature we will be using back-end and front-end tools.
+I am a Communication & Multimedia Design student at the Hogeschool van Amsterdam and I am currently in my second year.
+For this block (block-web) I was given the task to build a feature for a matching app. it's an app that allows people to create groups or find groups to join.
+The groups you can join have restrictions: activities, duration, date, location, and number of people. If you have joined a group, you have found a match. In this project I will create a filter function that people can base their group on or with which they can find a group. We will be using back-end and front-end tools to create this feature. 
 
 ## Table of Contents
 
@@ -16,7 +19,7 @@ The groups you can join have limitations: activities, duration, date, location a
 - [Feature requirements](#feature-requirements)
 - [Used Tools](#used-tools)
 - [Visuals](#visuals)
-- [Code](#code)
+- [!important files](!important-files)
 - [Meta](#meta)
 - [License](#license)
 
@@ -51,9 +54,18 @@ These are the current visuals of the filter feature.
 ![homescreen ui](https://github.com/TristanVarewijck/Block-Tech/blob/master/images/design-homepage.png)
 ![filter ui](https://github.com/TristanVarewijck/Block-Tech/blob/master/images/design-filter.png)
 
-## Code
+## !mportant files
 
-These are importent blocks of code to make this feature possible.
+Of course all files are important but you should at least have a look at these files if you are interested in this repo.
+Viewing these files will give you an idea of how this feature is built. 
+ 
+[index.js](https://github.com/TristanVarewijck/Block-Tech/blob/master/index.js) :page_facing_up: 
+
+[index.pug](https://github.com/TristanVarewijck/Block-Tech/blob/master/views/index.pug) :page_facing_up:
+
+[styles.css](https://github.com/TristanVarewijck/Block-Tech/blob/master/public/css/style.css) :page_facing_up:
+
+[package.json](https://github.com/TristanVarewijck/Block-Tech/blob/master/package.json) :page_facing_up:
 
 ## Meta
 
