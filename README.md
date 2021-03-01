@@ -1,5 +1,8 @@
 # ActiveTogether - filter feature
 
+![homescreen ui](https://github.com/TristanVarewijck/Block-Tech/blob/master/images/design-homepage.png)
+
+
 _Shields that represent my project - They change over time._
 
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/TristanVarewijck/Block-Tech) ![Isseus](https://img.shields.io/github/issues/TristanVarewijck/Block-Tech) ![Language](https://img.shields.io/github/languages/top/TristanVarewijck/Block-Tech) ![Count](https://img.shields.io/github/languages/count/TristanVarewijck/Block-Tech?color=#a55eea) ![NPM](https://img.shields.io/npm/v/npm) ![MIT-License](https://img.shields.io/apm/l/vim-mode)
