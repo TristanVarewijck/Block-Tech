@@ -1,5 +1,3 @@
-# ActiveTogether - filter feature
-
 ![banner](https://github.com/TristanVarewijck/Block-Tech/blob/master/images/Banner%20GitHub%20READ.ME.png)
 
 
