@@ -1,6 +1,6 @@
 ![banner](https://github.com/TristanVarewijck/Block-Tech/blob/master/images/Banner%20GitHub%20READ.ME.png)
 
-## ActiveTogether - Filter-Feature
+## ActiveTogether / Filter - Feature
 
 _Shields that represent my project - They change over time._
 
