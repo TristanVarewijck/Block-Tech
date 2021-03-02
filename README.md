@@ -18,7 +18,7 @@ The groups you can join have restrictions: activities, duration, date, location,
 - [Feature requirements](#feature-requirements)
 - [Used Tools](#used-tools)
 - [Visuals](#visuals)
-- [!important files](!important-files)
+- [!important files](#mportant-files)
 - [Meta](#meta)
 - [License](#license)
 

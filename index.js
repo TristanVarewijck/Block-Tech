@@ -3,6 +3,8 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
 const port = 3000;
+const dotenv = require('dotenv').config(); 
+const { MongoClient } = require('mongodb'); 
 const groups = [
   {
     activity: "all",
@@ -53,6 +55,22 @@ const groups = [
     duration: 1,
   },
 ];
+
+// connect to mongoDB 
+// Replace the following with your Atlas connection string
+const atlasUrl = process.env.DB_URL; 
+const client = new MongoClient(atlasUrl);
+async function run() {
+  try {
+    await client.connect();
+    console.log("Connected correctly to server");
+  } catch (err) {
+    console.log(err.stack);
+  } finally {
+    await client.close();
+  }
+}
+run().catch(console.dir);
 
 // static pages
 app.use(express.static("public"));
