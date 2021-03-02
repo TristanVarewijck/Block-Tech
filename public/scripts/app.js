@@ -11,12 +11,15 @@ function filterSlide() {
 
 // filter page hide
 
-const closeFilter = document.querySelector(".close-filter");
+const closeFilterButton = document.querySelector(".close-filter");
 
-closeFilter.addEventListener("click", filterClose);
+closeFilterButton.addEventListener("click", closeFilterScreen);
 
-function filterClose() {
+function closeFilterScreen() {
   const filter = document.querySelector(".filters-hidden");
 
   filter.classList.remove("filters-show");
 }
+
+
+
