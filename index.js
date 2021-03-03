@@ -3,8 +3,10 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
 let PORT = process.env.PORT || 3000;
-const { MongoClient } = require('mongodb'); 
-
+const dotenv = require('dotenv').config(); 
+const { MongoClient } = require('mongodb');
+var http = require('http');
+var server = http.Server(app); 
 const groups = [
   {
     activity: "all",

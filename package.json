@@ -4,7 +4,7 @@
   "description": "Project for block-tech",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "node index.js",
     "say-hello": "echo How are you doing?"
   },
   "author": "Tristan Varewijck",
