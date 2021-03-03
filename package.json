@@ -2,9 +2,9 @@
   "name": "matching-app",
   "version": "1.0.0",
   "description": "Project for block-tech",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "nodemon server.js",
     "say-hello": "echo How are you doing?"
   },
   "author": "Tristan Varewijck",
