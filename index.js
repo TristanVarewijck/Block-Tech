@@ -1,6 +1,7 @@
 // settings
 const express = require("express");
 const bodyParser = require("body-parser");
+const nodemon = require('nodemon');
 const app = express();
 let PORT = process.env.PORT || 3000;
 require('dotenv').config()
