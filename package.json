@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Project for block-tech",
   "main": "app.js",
+  "engines": {
+    "node": "= 4.5.0",
+    "npm": "= 3.9.6"
+  },
   "scripts": {
     "start": "nodemon server.js",
     "say-hello": "echo How are you doing?"
