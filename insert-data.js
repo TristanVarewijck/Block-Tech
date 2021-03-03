@@ -3,8 +3,7 @@
 const { MongoClient } = require("mongodb");
 
 // Replace the following with your Atlas connection string
-const url =
-  "mongodb+srv://Tristanvrw:X20yVPsvs1iqXf8o@matching-app.oyitr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority&useUnifiedTopology=true";
+const url = "mongodb+srv://Tristanvrw:X20yVPsvs1iqXf8o@matching-app.oyitr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority&useUnifiedTopology=true";
 const client = new MongoClient(url);
 
 // The database to use
