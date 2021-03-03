@@ -2,9 +2,11 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
-const port = process.env.port || 3000;
+let PORT = process.env.PORT || 3000;
 const dotenv = require('dotenv').config(); 
-const { MongoClient } = require('mongodb'); 
+const { MongoClient } = require('mongodb');
+var http = require('http');
+var server = http.Server(app); 
 const groups = [
   {
     activity: "all",
@@ -119,6 +121,6 @@ app.use(function (req, res, next) {
 });
 
 // server with express
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}!`);
+app.listen(PORT, () => {
+  console.log(`Example app listening on port ${PORT}!`);
 });
