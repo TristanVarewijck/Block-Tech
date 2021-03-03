@@ -8,7 +8,7 @@ _Shields that represent my project - They change over time._
 
 ## Description
 
-I am a Communication & Multimedia Design student at the Hogeschool van Amsterdam and I am currently in my second year.
+ am a Communication & Multimedia Design student at the Hogeschool van Amsterdam and I am currently in my second year.
 For this block (block-web) I was given the task to build a feature for a matching app. it's an app that allows people to create groups or find groups to join.
 The groups you can join have restrictions: activities, duration, date, location, and number of people. If you have joined a group, you have found a match. In this project I will create a filter function that people can base their group on or with which they can find a group. We will be using back-end and front-end tools to create this feature.
 
