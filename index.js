@@ -61,13 +61,17 @@ app.use(
 );
 
 // rendered pages (pug)
-app.get("/", (req, res) => {
+app.get("/", async (req, res) => {
+  
+  let groups = {} 
+  groups = await db.collection('options').find({}).toArray();
   res.render("index", {
     title: "ActiveTogether",
     results: 126,
     activities: ["cycling", "walking", "jogging", "fishing"],
     saved: 0,
     groupMembers: "6/20",
+    groups
   });
 });
 
