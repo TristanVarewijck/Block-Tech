@@ -48,7 +48,7 @@ This feature should atleast filter:
 - Heroku
 - MongoDB
 - Compass
-- hello 
+
 ## Visuals
 
 These are the current visuals of the filter feature.

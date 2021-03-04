@@ -1,64 +1,15 @@
 // settings
-const express = require("express");
-const bodyParser = require("body-parser");
+const express = require('express');
+const bodyParser = require('body-parser');
 const app = express();
 const PORT = process.env.PORT || 3000;
 require('dotenv').config()
 const { MongoClient } = require('mongodb');
-const groups = [
-  {
-    activity: "all",
-    distance: 10,
-    members: "0-10",
-    duration: 1,
-  },
-  {
-    activity: "all",
-    distance: 15,
-    members: "0-10",
-    duration: 3,
-  },
-  {
-    activity: "all",
-    distance: 20,
-    members: "0-10",
-    duration: 2,
-  },
-  {
-    activity: "all",
-    distance: 25,
-    members: "0-10",
-    duration: 2,
-  },
-  {
-    activity: "all",
-    distance: 30,
-    members: "0-10",
-    duration: 1,
-  },
-  {
-    activity: "all",
-    distance: 35,
-    members: "0-10",
-    duration: 3,
-  },
-  {
-    activity: "all",
-    distance: 3,
-    members: "0-10",
-    duration: 50,
-  },
-  {
-    activity: "all",
-    distance: 45,
-    members: "0-10",
-    duration: 1,
-  },
-];
 
 // connect to mongoDB 
 // Replace the following with your Atlas connection string
-const atlasUrl = process.env.DB_URL; 
+
+/*const atlasUrl = process.env.DB_URL; 
 const client = new MongoClient(atlasUrl);
 async function run() {
   try {
@@ -71,6 +22,30 @@ async function run() {
   }
 }
 run().catch(console.dir);
+*/
+
+let db = null 
+// funciton connectDB
+async function connectDB (){
+  // get URL from .env file
+  const uri = process.env.DB_URL
+  // make connection to database
+  const options = {useUnifiedTopology: true};
+  const client = new MongoClient(uri, options)
+  await client.connect(); 
+  db = await client.db(process.env.DB_NAME)
+}
+connectDB() 
+ .then(() => {
+   // if succesfull connection is made, show a message
+  console.log('we have a connection to Mongo!')
+})
+ .catch(error => {
+   // if connection is unsuccesful, show errors
+  console.log(error)
+});
+
+
 
 // static pages
 app.use(express.static("public"));
@@ -96,11 +71,13 @@ app.get("/", (req, res) => {
   });
 });
 
+
 // form method="post"
 app.post("/", (req, res) => {
   const filteredGroups = groups.filter(function (group) {
     return group.distance >= Number(req.body.distance);
   });
+
 
   res.render("index", {
     title: "ActiveTogether",
