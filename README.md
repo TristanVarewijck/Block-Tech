@@ -47,6 +47,7 @@ This feature should atleast filter:
 - json
 - Heroku
 - MongoDB
+- Compass
 
 ## Visuals
 
