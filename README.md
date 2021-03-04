@@ -45,6 +45,7 @@ This feature should atleast filter:
 - git
 - pug
 - json
+- Heroku
 
 ## Visuals
 
