@@ -46,6 +46,7 @@ This feature should atleast filter:
 - pug
 - json
 - Heroku
+- MongoDB
 
 ## Visuals
 
