@@ -48,6 +48,7 @@ This feature should atleast filter:
 - Heroku
 - MongoDB
 - Compass
+---
 
 ## Visuals
 
