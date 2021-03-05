@@ -83,7 +83,7 @@ app.post("/", async (req, res) => {
   // filter criteria's 
   const filteredGroups = groups.filter(function (group) {
     return group.distance <= Number(req.body.distance) 
-    && group.duration == Number(req.body.duration);
+    && group.duration == Number(req.body.duration)
   });
 
   res.render("index", {
