@@ -82,9 +82,9 @@ app.post("/", async (req, res) => {
   
   // filter criteria's 
   const filteredGroups = groups.filter(function (group) {
-    return group.activity == String(req.body.activity)
-    && group.duration <= Number(req.body.duration)
+    return group.activity == String(req.body.activity) 
     && group.distance <= Number(req.body.distance)
+    && group.duration <= Number(req.body.duration)
     && group.attendence <= Number(req.body.attendence)
   });
 

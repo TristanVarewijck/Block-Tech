@@ -62,17 +62,17 @@ section.filters-hidden
       option(value='walking') Walking
       option(value='jogging') Jogging
       option(value='fishing') Fishing
-    label(for='distance') Distance
-    input#distance(type='range', name='distance', min='0', max='50', step='10' value="0" oninput="this.nextElementSibling.value = this.value")
-    output 0
-    label(for='attendence') Attendence (max.)
+    label(for='distance') Distance (max)
+    input#distance(type='range', name='distance', min='0', max='50', step='10' value="50" oninput="this.nextElementSibling.value = this.value")
+    output 50 
+    label(for='attendence') Attendence (max)
     select#attendence(name='attendence')
       option all
       option(value=10) 10 people
       option(value=20) 20 people
       option(value=30) 30 people
       option(value=40) 40 or more people
-    label(for='duration') Duration (max.)
+    label(for='duration') Duration (max)
     select#duration(name='duration')
       option all
       option(value=1) 1 hour
