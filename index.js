@@ -84,6 +84,7 @@ app.post("/", async (req, res) => {
   const filteredGroups = groups.filter(function (group) {
     return group.distance <= Number(req.body.distance) 
     && group.duration == Number(req.body.duration)
+    // && group.attendence == Number(req.body.attendence)
   });
 
   res.render("index", {
