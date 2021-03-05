@@ -43,7 +43,7 @@ connectDB()
  .catch(error => {
    // if connection is unsuccesful, show errors
   console.log(error)
-  // hello
+  
 });
 
 
@@ -63,10 +63,7 @@ app.use(
 
 
 // rendered pages (pug)
-app.get("/", async (req, res) => {
-
-  let groups = {} 
-  groups = await db.collection('options').find({}).toArray();
+app.get("/", (req, res) => {
   res.render("index", {
     title: "ActiveTogether",
     results: 126,
@@ -78,7 +75,13 @@ app.get("/", async (req, res) => {
 });
 
 // form method="post"
-app.post("/", (req, res) => {
+app.post("/", async (req, res) => {
+  
+  // data from database 
+  let groups = {}
+  groups = await db.collection('options').find({}).toArray();
+  
+  // filter criteria 
   const filteredGroups = groups.filter(function (group) {
     return group.distance >= Number(req.body.distance);
   });
@@ -91,6 +94,7 @@ app.post("/", (req, res) => {
     saved: 0,
     groupMembers: "6/20",
     data: filteredGroups,
+    groups
   });
 });
 
