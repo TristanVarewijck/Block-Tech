@@ -63,14 +63,13 @@ app.use(
 
 
 // rendered pages (pug)
-app.get("/", (req, res) => {
+app.get("/", async (req, res) => {
+  let groups = {}
+  groups = await db.collection('options').find({}).toArray();
   res.render("index", {
     title: "ActiveTogether",
-    results: 126,
+    results: groups.length,
     activities: ["cycling", "walking", "jogging", "fishing"],
-    saved: 0,
-    groupMembers: "6/20",
-    
   });
 });
 
@@ -81,22 +80,26 @@ app.post("/", async (req, res) => {
   let groups = {}
   groups = await db.collection('options').find({}).toArray();
   
-  // filter criteria 
+  // filter criteria's 
   const filteredGroups = groups.filter(function (group) {
-    return group.distance >= Number(req.body.distance);
+    return group.distance <= Number(req.body.distance) 
+    && group.duration == Number(req.body.duration);
   });
-
 
   res.render("index", {
     title: "ActiveTogether",
     results: filteredGroups.length,
     activities: ["cycling", "walking", "jogging", "fishing"],
-    saved: 0,
-    groupMembers: "6/20",
-    data: filteredGroups,
     groups
   });
 });
+
+/* el.price <= 1000 &&
+         el.sqft >= 500 &&
+         el.num_of_beds >=2 &&
+         el.num_of_baths >= 2.5;
+
+         */
 
 
 // 404 page

@@ -61,24 +61,21 @@ section.filters-hidden
       option Walking
       option Jogging
       option Fishing
-    label(for='date') Date
-    input#date(type='date', name='date')
     label(for='distance') Distance
     input#distance(type='range', name='distance', min='0', max='50', step='10' value="0" oninput="this.nextElementSibling.value = this.value")
     output 0
     label(for='attendence') Attendence (max.)
     select#attendence(name='attendence')
-      option 0-10 people
-      option 10-20 people
-      option 20-30 people
-      option 30-40 people
-      opltion 40 + people
+      option 10
+      option 20
+      option 30
+      option 40
     label(for='duration') Duration (max.)
     select#duration(name='duration')
-      option 1 hour
-      option 2 hours
-      option 3 hours
-      option 3 + hours
+      option 1
+      option 2
+      option 3
+      option 4
     input(type='submit')
 
 script(src='/scripts/app.js')
