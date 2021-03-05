@@ -40,11 +40,11 @@ DB_NAME
 
 This feature should atleast filter:
 
+- All
 - Activities
+- Distance
 - Duration
-- Date
-- Location
-- Number of people
+- Attendence
 
 ## Used Tools
 
