@@ -30,8 +30,10 @@ The groups you can join have restrictions: activities, duration, date, location,
 
 `npm start`
 
-include in .env  
-DB_URL 
+include in .env
+
+DB_URL
+
 DB_NAME
 
 ## Feature requirements
