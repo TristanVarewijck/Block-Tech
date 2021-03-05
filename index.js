@@ -70,7 +70,7 @@ app.get("/", (req, res) => {
     activities: ["cycling", "walking", "jogging", "fishing"],
     saved: 0,
     groupMembers: "6/20",
-    groups
+    
   });
 });
 
