@@ -36,13 +36,14 @@ async function connectDB (){
   db = await client.db(process.env.DB_NAME)
 }
 connectDB() 
- .then(() => {
+ .then(() => { 
    // if succesfull connection is made, show a message
   console.log('we have a connection to Mongo!')
 })
  .catch(error => {
    // if connection is unsuccesful, show errors
   console.log(error)
+  // hello
 });
 
 
@@ -60,9 +61,10 @@ app.use(
   })
 );
 
+
 // rendered pages (pug)
 app.get("/", async (req, res) => {
-  
+
   let groups = {} 
   groups = await db.collection('options').find({}).toArray();
   res.render("index", {
@@ -74,7 +76,6 @@ app.get("/", async (req, res) => {
     groups
   });
 });
-
 
 // form method="post"
 app.post("/", (req, res) => {
