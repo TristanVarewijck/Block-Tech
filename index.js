@@ -69,7 +69,7 @@ app.get("/", async (req, res) => {
   res.render("index", {
     title: "ActiveTogether",
     results: groups.length,
-    activities: ["cycling", "walking", "jogging", "fishing"],
+    activity: ["cycling", "walking", "jogging", "fishing"],
   });
 });
 
@@ -82,15 +82,17 @@ app.post("/", async (req, res) => {
   
   // filter criteria's 
   const filteredGroups = groups.filter(function (group) {
-    return group.distance <= Number(req.body.distance) 
-    && group.duration == Number(req.body.duration)
-    // && group.attendence == Number(req.body.attendence)
+    return group.activity == String(req.body.activity)
+    && group.duration <= Number(req.body.duration)
+    && group.distance <= Number(req.body.distance)
+    && group.attendence <= Number(req.body.attendence)
   });
+
 
   res.render("index", {
     title: "ActiveTogether",
     results: filteredGroups.length,
-    activities: ["cycling", "walking", "jogging", "fishing"],
+    activity: ["cycling", "walking", "jogging", "fishing"],
     groups
   });
 });
