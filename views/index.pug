@@ -51,7 +51,8 @@ section.filters-hidden
       li
         h2 filters
       li
-        button Reset
+        // reset te page: https://stackoverflow.com/questions/29884654/button-that-refreshes-the-page-on-click
+        button(onclick="window.location.href=window.location.href") Reset
   
   // filter form (inputs)
   form.form(action="/" method='POST')
@@ -64,7 +65,7 @@ section.filters-hidden
       option(value='fishing') Fishing
     label(for='distance') Distance (max)
     input#distance(type='range', name='distance', min='0', max='50', step='10' value="50" oninput="this.nextElementSibling.value = this.value")
-    output 50 
+    output 50
     label(for='attendence') Attendence (max)
     select#attendence(name='attendence')
       option all

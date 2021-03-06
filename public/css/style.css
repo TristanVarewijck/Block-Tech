@@ -423,4 +423,5 @@ input[type="submit"] {
 /* output for range input */
 output {
   font-family: "Poppins", sans-serif;
+  display:block;
 }

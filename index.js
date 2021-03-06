@@ -88,6 +88,12 @@ app.post("/", async (req, res) => {
     && group.attendence <= Number(req.body.attendence)
   });
 
+  /* el.price <= 1000 &&
+         el.sqft >= 500 &&
+         el.num_of_beds >=2 &&
+         el.num_of_baths >= 2.5;
+         */
+
 
   res.render("index", {
     title: "ActiveTogether",
@@ -96,14 +102,6 @@ app.post("/", async (req, res) => {
     groups
   });
 });
-
-/* el.price <= 1000 &&
-         el.sqft >= 500 &&
-         el.num_of_beds >=2 &&
-         el.num_of_baths >= 2.5;
-
-         */
-
 
 // 404 page
 app.use(function (req, res, next) {
