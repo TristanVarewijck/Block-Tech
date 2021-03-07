@@ -286,7 +286,7 @@ section:nth-of-type(2) ul{
   overflow-x: scroll;
   list-style: none;
   padding: 1.5em 1.5em 2em 1.5em;
-  width: 50em;
+  width: fit-content;
 }
 
 section:nth-of-type(2) ul li{
@@ -312,7 +312,7 @@ section:nth-of-type(2) ul li div h2{
   }
 
 section:nth-of-type(2) ul li div p{
-  margin-bottom: 1em; 
+  margin-bottom: 1  em; 
   }
 
 

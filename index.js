@@ -89,7 +89,7 @@ app.post("/", async (req, res) => {
   res.render("index", {
     title: "ActiveTogether",
     results: filteredGroups.length,
-    groups: filteredGroups
+    groups: filteredGroups,
   });
 });
 

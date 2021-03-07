@@ -8,7 +8,7 @@ nav
   ul
     li <ion-icon name="heart"></ion-icon>
     li 
-  div.home
+  a(href='#')
 
 // header 
 header
@@ -26,10 +26,12 @@ main
       each group in groups 
         li
           div
-            h2 Walk in The Park
-            p=groups.distance
-            p=groups.attendence 
-            p=groups.duration
+            h2 #{group.name}
+            p Activity: #{group.activity} 
+            p Distance: #{group.distance} km
+            p Duration: #{group.duration} hour
+            p Attendence 0/#{group.attendence}
+          a(href='#') More Information!
      
     
     // cards (groups)
