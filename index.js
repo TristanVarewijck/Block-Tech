@@ -69,17 +69,15 @@ app.get("/", async (req, res) => {
   res.render("index", {
     title: "ActiveTogether",
     results: groups.length,
-    activity: ["cycling", "walking", "jogging", "fishing"],
+    groups: groups
   });
 });
 
 // form method="post"
 app.post("/", async (req, res) => {
-  
   // data from database 
-  let groups = {}
+  let groups = {};
   groups = await db.collection('options').find({}).toArray();
-  
   // filter criteria's 
   const filteredGroups = groups.filter(function (group) {
     return group.activity == String(req.body.activity) 
@@ -88,18 +86,10 @@ app.post("/", async (req, res) => {
     && group.attendence <= Number(req.body.attendence)
   });
 
-  /* el.price <= 1000 &&
-         el.sqft >= 500 &&
-         el.num_of_beds >=2 &&
-         el.num_of_baths >= 2.5;
-         */
-
-
   res.render("index", {
     title: "ActiveTogether",
     results: filteredGroups.length,
-    activity: ["cycling", "walking", "jogging", "fishing"],
-    groups
+    groups: filteredGroups
   });
 });
 

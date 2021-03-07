@@ -2,11 +2,6 @@ doctype html
 include includes/head.pug
 
 body
-  // if data
-    ul
-      each val in data
-        li=val.distance
-        li=val.members
 
 // navbar 
 nav
@@ -24,11 +19,21 @@ main
     form.search
       input(type='text' placeholder='Find events...')
     button.filter-button <ion-icon name="options"></ion-icon>
+  
   section
     h2.results #{results} Available Events!
+    ul
+      each group in groups 
+        li
+          div
+            h2 Walk in The Park
+            p=groups.distance
+            p=groups.attendence 
+            p=groups.duration
+     
     
     // cards (groups)
-    article
+    //article
      div
       h1 walk in the park
       h2 Activity: walking
