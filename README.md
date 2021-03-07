@@ -50,12 +50,11 @@ This feature should atleast filter:
 
 ## Used Tools
 
-- git
-- pug
-- json
-- Heroku
-- MongoDB
-- Compass
+- [git](https://git-scm.com/)
+- [pug](https://pugjs.org/api/getting-started.html)
+- [json](https://www.json.org/json-en.html)
+- [Heroku](https://www.heroku.com/)
+- [MongoDB](https://www.mongodb.com/)
 
 ## Visuals
 
