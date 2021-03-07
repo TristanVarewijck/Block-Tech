@@ -2,19 +2,20 @@
 
 ## ActiveTogether / Filter - Feature
 
-_Shields that represent my project - They change over time._
+_Shields that represent my project - They change over time._ (https://shields.io/)
 
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/TristanVarewijck/Block-Tech) ![Isseus](https://img.shields.io/github/issues/TristanVarewijck/Block-Tech) ![Language](https://img.shields.io/github/languages/top/TristanVarewijck/Block-Tech) ![Count](https://img.shields.io/github/languages/count/TristanVarewijck/Block-Tech?color=#a55eea) ![NPM](https://img.shields.io/npm/v/npm) ![MIT-License](https://img.shields.io/apm/l/vim-mode)
 
 ## Description
 
- am a Communication & Multimedia Design student at the Hogeschool van Amsterdam and I am currently in my second year.
+I am a Communication & Multimedia Design student at the Hogeschool van Amsterdam and I am currently in my second year.
 For this block (block-web) I was given the task to build a feature for a matching app. it's an app that allows people to create groups or find groups to join.
-The groups you can join have restrictions: activities, duration, date, location, and number of people. If you have joined a group, you have found a match. In this project I will create a filter function that people can base their group on or with which they can find a group. We will be using back-end and front-end tools to create this feature.
+The groups you can join have restrictions: activities, duration, distance, and number of people. If you have joined a group, you have found a match. In this project I will create a filter feature where people can base their group on or with which they can find a group. We will be using back-end and front-end tools to create this feature.
 
 ## Table of Contents
 
 - [Install](#install)
+  - [.env Sample](#env-sample)
 - [Feature requirements](#feature-requirements)
 - [Used Tools](#used-tools)
 - [Visuals](#visuals)
@@ -30,12 +31,13 @@ The groups you can join have restrictions: activities, duration, date, location,
 
 `npm start`
 
-include in .env
+### .env Sample
 
+````
 DB_URL
 
 DB_NAME
-
+````
 ## Feature requirements
 
 This feature should atleast filter:
@@ -83,4 +85,4 @@ Tristan Varewijck - tristan.varewijck@gmail.com - https://github.com/TristanVare
 
 ## License
 
-Usage is provided under the [MIT License](https://github.com/git/git-scm.com/blob/master/MIT-LICENSE.txt) . See LICENSE for the full details.
+Usage is provided under the [MIT License](https://github.com/git/git-scm.com/blob/master/MIT-LICENSE.txt) MIT. See [LICENSE](https://github.com/TristanVarewijck/Block-Tech/blob/master/LICENSE) for the full details.
