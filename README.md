@@ -32,7 +32,7 @@ The groups you can join have restrictions: activities, duration, distance, and n
 `npm start`
 
 ### .env Sample
-You need values to the bottom two [.env](https://www.npmjs.com/package/dotenv) variables.
+You need the values to the bottom two [.env](https://www.npmjs.com/package/dotenv) variables.
 
 ````
 DB_URL='somevalue'
