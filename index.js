@@ -69,14 +69,11 @@ app.get("/", async (req, res) => {
       groups = groups.filter(group => { return group.distance <= req.body.distance})
   }
   if (req.body.attendence != 'all') {
-      groups = groups.filter(group => { return group.attendence === req.body.attendence})
+      groups = groups.filter(group => { return group.attendence <= req.body.attendence})
   }
   if (req.body.duration != 'all') {
-      groups = groups.filter(group => { return group.duration === req.body.duration})
+      groups = groups.filter(group => { return group.duration <= req.body.duration})
   }
-    
-  console.log(groups);
-  
   res.render("index", {
     title: "ActiveTogether",
     results: groups.length,
