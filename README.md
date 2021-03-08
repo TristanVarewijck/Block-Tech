@@ -25,7 +25,8 @@ The groups you can join have restrictions: activities, duration, distance, and n
 
 ## Install
 
-`git clone https://github.com/TristanVarewijck/Block-Tech`
+````
+git clone https://github.com/TristanVarewijck/Block-Tech`
 
 `git pull`
 
