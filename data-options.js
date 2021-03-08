@@ -68,4 +68,18 @@
       "attendence":  10,
       "duration": 2,
     }, 
+    {
+      "name": "Get your bike an join us!",
+      "activity": "cycling",
+      "distance": 20,
+      "attendence": 40,
+      "duration": 2,
+    }, 
+    {
+      "name": "Try jogging instead of Walking",
+      "activity": "jogging",
+      "distance": 10,
+      "attendence":  20,
+      "duration": 1,
+    }, 
   ]
