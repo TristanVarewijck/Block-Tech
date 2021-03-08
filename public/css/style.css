@@ -134,8 +134,6 @@ html {
   overflow: hidden;
 }
 
-/*///////////////////////////////////////////////////////////*/
-
 /* fonts source: fonts.google.com */
 /* fonts
 font-family: 'Caveat', cursive;
@@ -237,7 +235,7 @@ header h1 {
   text-align: center;
 }
 
-/* button for filtering */
+/* filter button */
 .filter-button {
   position: absolute;
   color: #00a8ff;
@@ -262,6 +260,7 @@ section:nth-of-type(2) {
   margin: 0 0 0.5em 0;
 }
 
+/* Groups Slider */
 section:nth-of-type(2) > ul {
   display: flex;
   flex-wrap: nowrap;
@@ -271,14 +270,10 @@ section:nth-of-type(2) > ul {
   margin-top: 1.5em;
 }
 
-section:nth-of-type(2) ul::-webkit-scrollbar {
-  display: none;
-}
-
 section:nth-of-type(2) ul li {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(/assets/card-background.jpg);
-  background-color: #1e272e;
+    /* image source: https://www.pexels.com/nl-nl/foto/bladeren-op-bestrating-naast-hek-1645840/*/
   background-size: cover;
   width: 20em;
   height: 28em;
@@ -288,8 +283,7 @@ section:nth-of-type(2) ul li {
 }
 
 section:nth-of-type(2) ul li div {
-  margin-top: 2em;
-  margin-left: 2em;
+  margin: 2em 0 0 2em; 
 }
 
 section:nth-of-type(2) ul li div h2 {

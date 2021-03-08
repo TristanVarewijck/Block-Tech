@@ -66,6 +66,7 @@ This feature should atleast filter:
 - [json](https://www.json.org/json-en.html)
 - [Heroku](https://www.heroku.com/)
 - [MongoDB](https://www.mongodb.com/)
+- [ionicons](https://ionicons.com/)
 
 ## Visuals
 

@@ -19,6 +19,7 @@ main
       input(type='text' placeholder='Search for events...')
     button.filter-button <ion-icon name="options"></ion-icon>
   
+  // groups 
   section
     h2.results #{results} available groups!
     ul
@@ -33,7 +34,7 @@ main
             a(href='#') Join Group! 
             a(href='#') More Info
            
-   
+// footer  
 include includes/footer.pug
 
 // filter page 
@@ -58,6 +59,7 @@ article.filters-hidden
       option(value='jogging') Jogging
       option(value='fishing') Fishing
     label(for='distance') Travel Distance (max)
+    // automatic value change: https://stackoverflow.com/questions/44675522/get-the-text-value-of-a-select-created-dynamically
     input#distance(type='range', name='distance', min='0', max='50', step='10' value="50" oninput="this.nextElementSibling.value = this.value")
     output 50
     span km
