@@ -105,4 +105,12 @@ dist
 .DS_Store
 
 # prettier 
-.prettier.json 
+.prettier.json
+.prettierignore 
+
+# linter
+.eslintrc.js
+
+#database info
+.data-options.js
+

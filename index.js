@@ -6,23 +6,6 @@ const PORT = process.env.PORT || 3000;
 require('dotenv').config()
 const { MongoClient } = require('mongodb');
 
-// connect to mongoDB 
-// Replace the following with your Atlas connection string
-
-/*const atlasUrl = process.env.DB_URL; 
-const client = new MongoClient(atlasUrl);
-async function run() {
-  try {
-    await client.connect();
-    console.log("Connected correctly to server");
-  } catch (err) {
-    console.log(err.stack);
-  } finally {
-    await client.close();
-  }
-}
-run().catch(console.dir);
-*/
 
 let db = null 
 // funciton connectDB
