@@ -110,5 +110,4 @@ dist
 # linter
 .eslintrc.js
 
-Procfile
 
