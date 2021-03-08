@@ -29,7 +29,7 @@ The groups you can join have restrictions: activities, duration, distance, and n
 
 ## Install
 
-clone the GitHub Repo locally
+Clone the GitHub Repo locally
 ```
 git clone https://github.com/TristanVarewijck/Block-Tech`
 ```
