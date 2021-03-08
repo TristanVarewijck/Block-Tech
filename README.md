@@ -25,12 +25,18 @@ The groups you can join have restrictions: activities, duration, distance, and n
 
 ## Install
 
-````
+clone the GitHub Repo locally
+```
 git clone https://github.com/TristanVarewijck/Block-Tech`
-
-`git pull`
-
-`npm start`
+```
+Install the Packages
+```
+npm install
+```
+Start the Server
+```
+npm start
+```
 
 ### .env Sample
 You need the values to the bottom two [.env](https://www.npmjs.com/package/dotenv) variables.
