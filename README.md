@@ -12,6 +12,10 @@ I am a Communication & Multimedia Design student at the Hogeschool van Amsterdam
 For this block (block-web) I was given the task to build a feature for a matching app. it's an app that allows people to create groups or find groups to join.
 The groups you can join have restrictions: activities, duration, distance, and number of people. If you have joined a group, you have found a match. In this project I will create a filter feature where people can base their group on or with which they can find a group. We will be using back-end and front-end tools to create this feature.
 
+**Jobstory**
+
+**When** I plan to search for a match **I want to** set a group to allow a maximum of 20 people, **so that I can** search for groups with not too many people.
+
 ## Table of Contents
 
 - [Install](#install)
