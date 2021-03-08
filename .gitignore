@@ -106,11 +106,10 @@ dist
 
 # prettier 
 .prettier.json
-prettierignore 
+.prettierignore
 
 # linter
 .eslintrc.js
 
 #database info
-data-options.js
-
+.data-options.js
