@@ -92,7 +92,6 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
- 
 }
 /* HTML5 display-role reset for older browsers */
 article,
@@ -131,8 +130,8 @@ table {
   border-spacing: 0;
 }
 
-html{
-  overflow:hidden;
+html {
+  overflow: hidden;
 }
 
 /*///////////////////////////////////////////////////////////*/
@@ -226,7 +225,6 @@ header h1 {
   left: 15%;
   margin-top: 2em;
   display: flex;
- 
 }
 
 .search input[type="text"] {
@@ -260,74 +258,72 @@ section:nth-of-type(2) {
   left: 15%;
   font-weight: 500;
   font-size: 1em;
-  color:#1E272E;
-  margin: 0 0 .5em 0; 
+  color: #1e272e;
+  margin: 0 0 0.5em 0;
 }
 
-section:nth-of-type(2) > ul{
+section:nth-of-type(2) > ul {
   display: flex;
   flex-wrap: nowrap;
   list-style: none;
   padding: 0em 1.5em 2em 1.5em;
   width: fit-content;
-  margin-top:1.5em;
+  margin-top: 1.5em;
 }
 
-section:nth-of-type(2) ul::-webkit-scrollbar{
-  display:none;
+section:nth-of-type(2) ul::-webkit-scrollbar {
+  display: none;
 }
 
-
-section:nth-of-type(2) ul li{
-background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-  url(/assets/card-background.jpg);
-background-color: #1E272E;
-background-size: cover;
-width: 20em;
-height: 28em;
-border-radius: 10px;
-color: white;
-margin-left: 1.5em;
+section:nth-of-type(2) ul li {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/assets/card-background.jpg);
+  background-color: #1e272e;
+  background-size: cover;
+  width: 20em;
+  height: 28em;
+  border-radius: 10px;
+  color: white;
+  margin-left: 1.5em;
 }
 
-section:nth-of-type(2) ul li div{
-margin-top: 2em; 
-margin-left: 2em;
+section:nth-of-type(2) ul li div {
+  margin-top: 2em;
+  margin-left: 2em;
 }
 
-section:nth-of-type(2) ul li div h2{
+section:nth-of-type(2) ul li div h2 {
   margin: 2em 0 1.5em 0;
-  font-size: 1.4em; 
+  font-size: 1.4em;
   max-width: 12em;
   font-weight: 500;
   line-height: 1.1em;
-  
-  }
+}
 
-section:nth-of-type(2) ul li div p{
-  margin-bottom: .5em; 
-  }
+section:nth-of-type(2) ul li div p {
+  margin-bottom: 0.5em;
+}
 
-section:nth-of-type(2) ul li div p:last-of-type{
+section:nth-of-type(2) ul li div p:last-of-type {
   margin-bottom: 10em;
 }
 
-  section:nth-of-type(2) ul li a{
+section:nth-of-type(2) ul li a {
   border: none;
   background-color: #f53b57;
   color: white;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
-  font-size: .9em;
-  width: 40%; 
-  padding: .5em 1em .5em 1em;
+  font-size: 0.9em;
+  width: 40%;
+  padding: 0.5em 1em 0.5em 1em;
   border-radius: 2px;
-  margin-right: .5em;
-  }
+  margin-right: 0.5em;
+}
 
-  section:nth-of-type(2) ul li a:last-of-type{
-  background-color: #1E272E;
-  }
+section:nth-of-type(2) ul li a:last-of-type {
+  background-color: #1e272e;
+}
 
 /* footer */
 footer {
@@ -365,7 +361,7 @@ footer a:nth-of-type(2) {
   color: black;
   transform: translateY(-100%);
   transition: 1s;
-  overflow:hidden;
+  overflow: hidden;
 }
 
 .filters-show {
@@ -416,9 +412,8 @@ select {
   border: solid 1px #d6d6d6;
   border-radius: 5px;
   background-color: white;
-  text-align:center;
+  text-align: center;
   display: block;
-  
 }
 
 input[type="submit"] {
@@ -432,28 +427,27 @@ input[type="submit"] {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 1em;
-  overflow:hidden;
+  overflow: hidden;
   vertical-align: center;
 }
-
 
 /* output for range input */
 output {
   font-family: "Poppins", sans-serif;
-  display:inline-block;
+  display: inline-block;
 }
 
-span{
+span {
   font-family: "Poppins", sans-serif;
 }
 
 /* Annoying overflow */
-body{
-  overflow-x:hidden;
+body {
+  overflow-x: hidden;
 }
-main{
-  overflow:hidden;  
+main {
+  overflow: hidden;
 }
-section:nth-of-type(2){
-  overflow-y:hidden;
+section:nth-of-type(2) {
+  overflow-y: hidden;
 }
