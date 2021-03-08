@@ -3,7 +3,7 @@
       "activity": "fishing",
       "distance": 10,
       "attendence":  10,
-      "duration": 1,
+      "duration": 4,
     },
     {
       "name": "Jog till you can't no more!",
@@ -52,7 +52,7 @@
       "activity": "Cycling",
       "distance": 40,
       "attendence":  30,
-      "duration": 2,
+      "duration": 3,
     },
     {
       "name": "Cycling around the City",
@@ -66,6 +66,6 @@
       "activity": "fishing",
       "distance": 50,
       "attendence":  10,
-      "duration": 1,
+      "duration": 2,
     }, 
   ]

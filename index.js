@@ -74,12 +74,11 @@ app.get("/", async (req, res) => {
 });
 
 // form method="post"
-app.post("/", async (req, res) => {
+  app.post("/", async (req, res) => {
   // data from database 
-  let groups = {};
+  let groups = {}
   groups = await db.collection('options').find({}).toArray();
-  // filter criteria's 
-  const filteredGroups = groups.filter(function (group) {
+    const filteredGroups = groups.filter(function (group) {
     return group.activity == String(req.body.activity) 
     && group.distance <= Number(req.body.distance)
     && group.duration <= Number(req.body.duration)
@@ -92,6 +91,58 @@ app.post("/", async (req, res) => {
     groups: filteredGroups,
   });
 });
+    
+    /*if(req.body.activity !== 'all'){
+      groups = groups.filter(group => {return group.activity === String(req.body.activity)})
+    }
+
+    if(req.body.distance !== 'all'){
+      groups = groups.filter(group => {return group.distance === Number(req.body.distance)})
+    }
+
+    if(req.body.attendence !== 'all'){
+      groups = groups.filter(group => {return group.attendence === Number(req.body.attendence)})
+    }
+
+    if(req.body.duration !== 'all'){
+      groups = groups.filter(group => {return group.duration === Number(req.body.duration)})
+    };
+    
+    res.render("index", {
+      title: "ActiveTogether",
+      results: filteredGroups.length,
+      groups: filteredGroups,
+    });
+  });*/ 
+
+   /*const filteredGroups = groups.filter(function (group) {
+    return group.activity == String(req.body.activity) 
+    && group.distance <= Number(req.body.distance)
+    && group.duration <= Number(req.body.duration)
+    && group.attendence <= Number(req.body.attendence)
+  }); */
+
+  /*if(req.body.activitiy !== 'all'){
+    groups = groups.filter(group => {return group === req.body.activity})
+  }
+  if(req.body.distance !== 'all'){
+    groups = groups.filter(group => {return group === req.body.distance})
+  } */ 
+
+  
+/*const firstFiltered = filterArray(groups, req.body.activity)
+const secondFiltered = filterArray(firstFiltered, req.body.distance)
+const thirdFiltered = filterArray(secondFiltered, req.body.attendance)
+const filteredGroups = filterArray(thirdFiltered, req.body.duration)
+console.log(filteredGroups)
+function filterArray(array, filtering){
+  if(filtering !== 'all'){
+    return array.filter(item => {return item === filtering})
+  }
+  return array
+}
+*/ 
+
 
 // 404 page
 app.use(function (req, res, next) {

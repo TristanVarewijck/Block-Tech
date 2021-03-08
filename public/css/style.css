@@ -92,7 +92,7 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
-  overflow-y: hidden;
+ 
 }
 /* HTML5 display-role reset for older browsers */
 article,
@@ -131,6 +131,10 @@ table {
   border-spacing: 0;
 }
 
+html{
+  overflow:hidden;
+}
+
 /*///////////////////////////////////////////////////////////*/
 
 /* fonts source: fonts.google.com */
@@ -151,9 +155,6 @@ rood = #F53B57
   font-family: "Lato", sans-serif;
 }
 
-body{
-  overflow-x: hidden;
-}
 h1,
 h2,
 label {
@@ -179,7 +180,7 @@ nav ul li {
   font-size: 1.2em;
 }
 
-div.home {
+nav:first-of-type a {
   position: absolute;
   color: white;
   top: 0;
@@ -201,6 +202,7 @@ header {
   flex-wrap: wrap;
   left: 15%;
   margin-bottom: 1em;
+  margin-top: 2em;
 }
 
 header nav ul li:nth-of-type(2) {
@@ -212,7 +214,7 @@ header nav ul li:nth-of-type(2) {
 
 header h1 {
   color: #00a8ff;
-  font-size: 1.5em;
+  font-size: 1.8em;
   font-weight: 600;
   letter-spacing: 0.5px;
   line-height: 1.2em;
@@ -223,13 +225,12 @@ header h1 {
   position: relative;
   left: 15%;
   margin-top: 2em;
-  text-align: center;
   display: flex;
-  overflow: hidden;
+ 
 }
 
 .search input[type="text"] {
-  border-radius: 8px;
+  border-radius: 4px;
   border: solid 0.5px #00a8ff;
   background: #f9f9f9;
   height: 2em;
@@ -246,7 +247,7 @@ header h1 {
   font-size: 1.8em;
   border: none;
   right: 20%;
-  top: 18%;
+  top: 20%;
 }
 
 /* dynamic results (filter results text) */
@@ -255,48 +256,35 @@ section:nth-of-type(2) {
 }
 
 .results {
-  position: relative;
+  position: fixed;
   left: 15%;
   font-weight: 500;
   font-size: 1em;
-  margin-left: 0;
+  color:#1E272E;
+  margin: 0 0 .5em 0; 
 }
 
-/* card (groups) */
-/*article {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url(/assets/card-background.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-color: black;
-  position: absolute;
-  width: 75%;
-  height: 28em;
-  top: 61%;
-  right: 50%;
-  transform: translate(50%, -50%);
-  border-radius: 10px;
-  color: white;
-}*/
-
-section:nth-of-type(2) ul{
+section:nth-of-type(2) > ul{
   display: flex;
   flex-wrap: nowrap;
-  overflow-x: visible;
-  overflow-x: scroll;
   list-style: none;
-  padding: 1.5em 1.5em 2em 1.5em;
+  padding: 0em 1.5em 2em 1.5em;
   width: fit-content;
+  margin-top:1.5em;
 }
 
+section:nth-of-type(2) ul::-webkit-scrollbar{
+  display:none;
+}
+
+
 section:nth-of-type(2) ul li{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
   url(/assets/card-background.jpg);
+background-color: #1E272E;
 background-size: cover;
 width: 20em;
 height: 28em;
-top: 61%;
-right: 50%;
 border-radius: 10px;
 color: white;
 margin-left: 1.5em;
@@ -308,13 +296,38 @@ margin-left: 2em;
 }
 
 section:nth-of-type(2) ul li div h2{
-  margin-bottom: 2em; 
+  margin: 2em 0 1.5em 0;
+  font-size: 1.4em; 
+  max-width: 12em;
+  font-weight: 500;
+  line-height: 1.1em;
+  
   }
 
 section:nth-of-type(2) ul li div p{
-  margin-bottom: 1  em; 
+  margin-bottom: .5em; 
   }
 
+section:nth-of-type(2) ul li div p:last-of-type{
+  margin-bottom: 10em;
+}
+
+  section:nth-of-type(2) ul li a{
+  border: none;
+  background-color: #f53b57;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: .9em;
+  width: 40%; 
+  padding: .5em 1em .5em 1em;
+  border-radius: 2px;
+  margin-right: .5em;
+  }
+
+  section:nth-of-type(2) ul li a:last-of-type{
+  background-color: #1E272E;
+  }
 
 /* footer */
 footer {
@@ -325,7 +338,6 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-around;
-
   /* Bron: https://html-css-js.com/css/generator/box-shadow/ */
   -webkit-box-shadow: 0px -2px 6px -4px rgba(0, 0, 0, 0.3);
   box-shadow: 0px -2px 6px -4px rgba(0, 0, 0, 0.3);
@@ -353,10 +365,10 @@ footer a:nth-of-type(2) {
   color: black;
   transform: translateY(-100%);
   transition: 1s;
+  overflow:hidden;
 }
 
 .filters-show {
-  position: fixed;
   transform: translateY(0%);
 }
 
@@ -405,6 +417,7 @@ select {
   border-radius: 5px;
   background-color: white;
   text-align:center;
+  display: block;
   
 }
 
@@ -427,7 +440,20 @@ input[type="submit"] {
 /* output for range input */
 output {
   font-family: "Poppins", sans-serif;
-  display:block;
+  display:inline-block;
 }
 
+span{
+  font-family: "Poppins", sans-serif;
+}
 
+/* Annoying overflow */
+body{
+  overflow-x:hidden;
+}
+main{
+  overflow:hidden;  
+}
+section:nth-of-type(2){
+  overflow-y:hidden;
+}
