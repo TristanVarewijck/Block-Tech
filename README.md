@@ -31,7 +31,7 @@ The groups you can join have restrictions: activities, duration, distance, and n
 
 Clone the GitHub Repo locally
 ```
-git clone https://github.com/TristanVarewijck/Block-Tech`
+git clone https://github.com/TristanVarewijck/Block-Tech.git
 ```
 Install the Packages
 ```
