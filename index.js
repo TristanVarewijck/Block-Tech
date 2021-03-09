@@ -7,6 +7,7 @@ require('dotenv').config()
 const { MongoClient } = require('mongodb')
 // Mongo connection
 let db = null
+console.log(process.env.DB_URI)
 // funciton connectDB
 async function connectDB () {
   // get URL from .env file
@@ -24,7 +25,7 @@ connectDB()
   })
   .catch(error => {
     // if connection is unsuccesful, show errors
-    console.log( `MongoDB error: ${​​error}​​`)
+    console.log(error)
   })
 
   // static pages
