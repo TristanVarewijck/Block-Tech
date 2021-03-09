@@ -10,7 +10,7 @@ let db = null
 // funciton connectDB
 async function connectDB () {
   // get URL from .env file
-  const uri = process.env.DB_URL
+  const uri = process.env.DB_URI
   // make connection to database
   const options = { useUnifiedTopology: true }
   const client = new MongoClient(uri, options)
