@@ -7,7 +7,6 @@ require('dotenv').config()
 const { MongoClient } = require('mongodb')
 // Mongo connection
 let db = null
-console.log(`process.env.DB_URI ${process.env.DB_URI}`)
 // funciton connectDB
 async function connectDB () {
   // get URL from .env file
