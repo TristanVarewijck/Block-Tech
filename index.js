@@ -1,12 +1,12 @@
 // settings
-const express = require('express');
-const bodyParser = require('body-parser');
-const app = express();
-require('dotenv').config();
+const express = require('express')
+const bodyParser = require('body-parser')
+const app = express()
+require('dotenv').config()
 const { 
   MongoClient 
-} = require('mongodb');
-var PORT = process.env.PORT || 3000;
+} = require('mongodb')
+let PORT = process.env.PORT || 3000;
 
 // Mongo connection
 let db = null
@@ -41,18 +41,18 @@ app.use(
   bodyParser.urlencoded({
     extended: true
   })
-);
+)
 
 // rendered page
 app.get('/', async (req, res) => {
   let groups = {}
-  groups = await db.collection('options').find({}).toArray();
+  groups = await db.collection('options').find({}).toArray()
   res.render('index', {
     title: 'ActiveTogether',
     results: groups.length,
     groups: groups
-  });
-});
+  })
+})
 
 // rendered post page
 // form method="post"
