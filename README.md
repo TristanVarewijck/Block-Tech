@@ -43,10 +43,10 @@ npm start
 ```
 
 ### .env Sample
-You need the values to the bottom two [.env](https://www.npmjs.com/package/dotenv) variables.
+You need the following keys to make a connection to the database.
 
 ````
-DB_URL='"mongodb+srv://<username>:<password>@matching-app.oyitr.mongodb.net/test"'
+DB_URL="mongodb+srv://<username>:<password>@matching-app.oyitr.mongodb.net/test"
 DB_NAME=<databaseName>
 ````
 ## Feature requirements
