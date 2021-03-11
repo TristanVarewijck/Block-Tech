@@ -3,9 +3,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const app = express()
 require('dotenv').config()
-const { 
-  MongoClient 
-} = require('mongodb')
+const { MongoClient } = require('mongodb')
 let PORT = process.env.PORT || 3000;
 
 // Mongo connection

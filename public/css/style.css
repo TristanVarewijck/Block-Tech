@@ -134,6 +134,7 @@ html {
   overflow: hidden;
 }
 
+
 /* fonts source: fonts.google.com */
 /* fonts
 font-family: 'Caveat', cursive;
@@ -147,7 +148,7 @@ black = #1E272E
 rood = #F53B57
 */
 
-/* all */
+/* standard mark-up */
 * {
   font-family: "Lato", sans-serif;
 }
@@ -273,7 +274,7 @@ section:nth-of-type(2) > ul {
 section:nth-of-type(2) ul li {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(/assets/card-background.jpg);
-    /* image source: https://www.pexels.com/nl-nl/foto/bladeren-op-bestrating-naast-hek-1645840/*/
+    /* image source, pexels: https://www.pexels.com/nl-nl/foto/bladeren-op-bestrating-naast-hek-1645840/*/
   background-size: cover;
   width: 20em;
   height: 28em;
@@ -328,7 +329,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  /* Bron: https://html-css-js.com/css/generator/box-shadow/ */
+  /* webkit for shadow source: https://html-css-js.com/css/generator/box-shadow/ */
   -webkit-box-shadow: 0px -2px 6px -4px rgba(0, 0, 0, 0.3);
   box-shadow: 0px -2px 6px -4px rgba(0, 0, 0, 0.3);
 }
@@ -426,6 +427,7 @@ input[type="submit"] {
 }
 
 /* output for range input */
+/* output tag source: https://www.w3schools.com/tags/tag_output.asp
 output {
   font-family: "Poppins", sans-serif;
   display: inline-block;
