@@ -46,8 +46,8 @@ npm start
 You need the values to the bottom two [.env](https://www.npmjs.com/package/dotenv) variables.
 
 ````
-DB_URL='somevalue'
-DB_NAME='somevalue'
+DB_URL='"mongodb+srv://<username>:<password>@matching-app.oyitr.mongodb.net/test"'
+DB_NAME=<databaseName>
 ````
 ## Feature requirements
 

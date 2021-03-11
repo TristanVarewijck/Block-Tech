@@ -1,31 +1,33 @@
 // settings
-const express = require('express')
-const bodyParser = require('body-parser')
-const app = express()
-const PORT = process.env.PORT || 5000
-require('dotenv').config()
-const { MongoClient } = require('mongodb')
+const express = require('express');
+const bodyParser = require('body-parser');
+const app = express();
+const dotenv = require('dotenv').config();
+const { 
+  MongoClient 
+} = require('mongodb');
+var PORT = process.env.PORT || 3000;
+
 // Mongo connection
 let db = null
 // funciton connectDB
-async function connectDB () {
+async function connectDB() {
   // get URL from .env file
   const uri = process.env.DB_URI
   // make connection to database
   const options = { useUnifiedTopology: true }
   const client = new MongoClient(uri, options)
-  await client.connect()
+  await client.connect();
   db = await client.db(process.env.DB_NAME)
 }
 connectDB()
-  .then(() => {
+   try {
     // if succesfull connection is made, show a message
     console.log('we have a connection to Mongo!')
-  })
-  .catch(error => {
+  } catch (error) {
     // if connection is unsuccesful, show errors
     console.log(error)
-  })
+  }
 
   // static pages
 app.use(express.static('public'))
@@ -34,22 +36,23 @@ app.use(express.static('public'))
 app.set('view engine', 'pug')
 
 // bodyparser setting
+app.use(bodyParser.json());
 app.use(
   bodyParser.urlencoded({
     extended: true
   })
-)
+);
 
 // rendered page
 app.get('/', async (req, res) => {
   let groups = {}
-  groups = await db.collection('options').find({}).toArray()
+  groups = await db.collection('options').find({}).toArray();
   res.render('index', {
     title: 'ActiveTogether',
     results: groups.length,
     groups: groups
-  })
-})
+  });
+});
 
 // rendered post page
 // form method="post"
