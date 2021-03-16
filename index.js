@@ -27,7 +27,8 @@ connectDB()
     console.log(error)
   }
 
-  // static pages
+
+// static pages
 app.use(express.static('public'))
 
 // pug setup
@@ -56,6 +57,12 @@ app.get('/', async (req, res) => {
 // form method="post"
 app.post('/', async (req, res) => {
   // data from database
+  let userLogedIn = {
+    "id": 11,
+    "username": "Tristanvrw",
+    "password": 12345,
+    "email": "tristan88@live.nl"
+}
   let groups = {}
   groups = await db.collection('options').find({}).toArray()
   // filter criteria
