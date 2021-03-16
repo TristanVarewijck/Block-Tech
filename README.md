@@ -20,6 +20,7 @@ The groups you can join have restrictions: activities, duration, distance, and n
 
 - [Install](#install)
   - [.env Sample](#env-sample)
+  - [Database structure](#database-structure)
 - [Feature requirements](#feature-requirements)
 - [Used Tools](#used-tools)
 - [Visuals](#visuals)
@@ -49,6 +50,12 @@ You need the following keys to make a connection to the database.
 DB_URL="mongodb+srv://<username>:<password>@matching-app.oyitr.mongodb.net/test"
 DB_NAME=<databaseName>
 ````
+### Database structure 
+The database im using is mongoDB and its structured very simple. You can see the structure in the visual below:
+
+<img src="https://github.com/TristanVarewijck/Block-Tech/blob/master/images/Database-structure.png" alt="database-structure" width="400">
+mongoDB -> database -> collection ->> data 
+
 ## Feature requirements
 
 This feature should atleast filter:
