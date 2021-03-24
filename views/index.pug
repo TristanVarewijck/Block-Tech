@@ -53,31 +53,62 @@ article.filters-hidden
   // filter form (inputs)
   form.form(action="/" method='POST')
     label(for='activity') Activities
-    select#activity(name='activity')
-      option all
-      option(value='cycling') Cycling
-      option(value='walking') Walking
-      option(value='jogging') Jogging
-      option(value='fishing') Fishing
+    select#activity(name='activity' required="required")
+        if(filterDB)
+          option(value='#{filterDB.document.activity}' hidden='hidden') #{filterDB.document.activity}
+          option all
+          option(value='cycling') Cycling
+          option(value='walking') Walking
+          option(value='jogging') Jogging
+          option(value='fishing') Fishing
+        else 
+          option(value='' hidden='hidden') Select your sport
+          option all
+          option(value='cycling') Cycling
+          option(value='walking') Walking
+          option(value='jogging') Jogging
+          option(value='fishing') Fishing
     label(for='distance') Travel Distance (max)
     // automatic value change, stackoverflow: https://stackoverflow.com/questions/44675522/get-the-text-value-of-a-select-created-dynamically
-    input#distance(type='range', name='distance', min='0', max='50', step='10' value="50" oninput="this.nextElementSibling.value = this.value")
-    output 50
+    
+    if(filterDB)
+      input#distance(type='range', name='distance', min='0', max='50', step='10' value='#{filterDB.document.distance}' oninput="this.nextElementSibling.value = this.value")
+      output #{filterDB.document.distance}
+    else 
+      input#distance(type='range', name='distance', min='0', max='50', step='10' value='50' oninput="this.nextElementSibling.value = this.value")
+      output 50
     span km
     label(for='attendence') Attendence (max)
-    select#attendence(name='attendence')
-      option all
-      option(value=10) 10 people
-      option(value=20) 20 people
-      option(value=30) 30 people
-      option(value=40) 40 or more people
+    select#attendence(name='attendence' required='required')
+        if(filterDB)
+          option(value='#{filterDB.document.attendence}' hidden='hidden') #{filterDB.document.attendence}
+          option(value='all') all
+          option(value=10) 10 people
+          option(value=20) 20 people
+          option(value=30) 30 people
+          option(value=40) 40 or more people
+        else 
+          option(value='all') all
+          option(value=10) 10 people
+          option(value=20) 20 people
+          option(value=30) 30 people
+          option(value=40) 40 or more people
+    
     label(for='duration') Duration (max)
-    select#duration(name='duration')
-      option all
-      option(value=1) 1 hour
-      option(value=2) 2 hours
-      option(value=3) 3 hours
-      option(value=4) 4 hours or more
+    select#duration(name='duration' required='required')
+        if(filterDB)
+          option(value='#{filterDB.document.duration}' hidden='hidden') #{filterDB.document.duration}
+          option(value='all') all
+          option(value=1) 1 hour
+          option(value=2) 2 hours
+          option(value=3) 3 hours
+          option(value=4) 4 hours or more
+        else 
+          option(value='all') all
+          option(value=1) 1 hour
+          option(value=2) 2 hours
+          option(value=3) 3 hours
+          option(value=4) 4 hours or more
     input(type='submit' value='FILTER')
 
 script(src='/scripts/app.js')

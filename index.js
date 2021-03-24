@@ -8,6 +8,7 @@ let PORT = process.env.PORT || 3000;
 
 // Mongo connection
 let db = null
+let filter;
 // funciton connectDB
 async function connectDB() {
   // get URL from .env file
@@ -17,6 +18,8 @@ async function connectDB() {
   const client = new MongoClient(uri, options)
   await client.connect();
   db = await client.db(process.env.DB_NAME)
+  filter = db.collection('filter'); 
+  
 }
 connectDB()
    try {
@@ -45,11 +48,15 @@ app.use(
 // rendered page
 app.get('/', async (req, res) => {
   let groups = {}
+  let filterDB;
+  // let filterDB = {}; 
+	// filterDB = await filter.findOne({}, { sort: { _id: -1 }, limit: 1 });
   groups = await db.collection('options').find({}).toArray()
   res.render('index', {
     title: 'ActiveTogether',
     results: groups.length,
-    groups: groups
+    groups: groups,
+    filterDB
   })
 })
 
@@ -57,14 +64,31 @@ app.get('/', async (req, res) => {
 // form method="post"
 app.post('/', async (req, res) => {
   // data from database
-  let userLogedIn = {
-    "id": 11,
-    "username": "Tristanvrw",
-    "password": 12345,
-    "email": "tristan88@live.nl"
-}
   let groups = {}
   groups = await db.collection('options').find({}).toArray()
+
+  let filterDB = {}
+  filterDB = await filter.findOne({}, { sort: { _id: -1 }, limit: 1 });
+	if(await filter.countDocuments() > 0) {
+		try {
+			const document = { 'activity': req.body.activity, 'distance': req.body.distance, 'attendence': req.body.attendence, 'duration': req.body.duration };
+			await filter.updateOne({}, {$set: { document }});
+			filterDB = await filter.findOne({}, { sort: { _id: -1 }, limit: 1 });
+		}
+		catch (error) {
+			console.error('Error:', error);
+		}}
+	else {
+		try {
+			const document = { 'activity': req.body.activity, 'distance': req.body.distance, 'attendence': req.body.attendence, 'duration': req.body.duration }
+			await filter.insertOne({ document });
+    
+			filterDB = await filter.findOne({}, { sort: { _id: -1 }, limit: 1 });
+		}
+		catch (error) {
+			console.error('Error:', error);
+    }}
+
   // filter criteria
   if (req.body.activity !== 'all') {
     groups = groups.filter(group => { return group.activity === req.body.activity })
@@ -78,10 +102,15 @@ app.post('/', async (req, res) => {
   if (req.body.duration !== 'all') {
     groups = groups.filter(group => { return group.duration <= req.body.duration })
   }
+
+  
+    
+
   res.render('index', {
     title: 'ActiveTogether',
     results: groups.length,
-    groups: groups
+    groups: groups,
+    filterDB
   })
 })
 
