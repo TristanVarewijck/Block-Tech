@@ -53,17 +53,16 @@ article.filters-hidden
   // filter form (inputs)
   form.form(action="/" method='POST')
     label(for='activity') Activities
-    select#activity(name='activity' required="required")
+    select#activity(name='activity')
         if(filterDB)
-          option(value='#{filterDB.document.activity}' hidden='hidden') #{filterDB.document.activity}
-          option all
+          option(value='#{filterDB.document.activity}' hidden='hidden') !{filterDB.document.activity}
+          option(value='all') all
           option(value='cycling') Cycling
           option(value='walking') Walking
           option(value='jogging') Jogging
           option(value='fishing') Fishing
         else 
-          option(value='' hidden='hidden') Select your sport
-          option all
+          option(value='all') all
           option(value='cycling') Cycling
           option(value='walking') Walking
           option(value='jogging') Jogging
@@ -79,9 +78,9 @@ article.filters-hidden
       output 50
     span km
     label(for='attendence') Attendence (max)
-    select#attendence(name='attendence' required='required')
+    select#attendence(name='attendence')
         if(filterDB)
-          option(value='#{filterDB.document.attendence}' hidden='hidden') #{filterDB.document.attendence}
+          option(value='#{filterDB.document.attendence}' hidden='hidden') !{filterDB.document.attendence}
           option(value='all') all
           option(value=10) 10 people
           option(value=20) 20 people
@@ -95,9 +94,9 @@ article.filters-hidden
           option(value=40) 40 or more people
     
     label(for='duration') Duration (max)
-    select#duration(name='duration' required='required')
+    select#duration(name='duration')
         if(filterDB)
-          option(value='#{filterDB.document.duration}' hidden='hidden') #{filterDB.document.duration}
+          option(value='#{filterDB.document.duration}' hidden='hidden') !{filterDB.document.duration}
           option(value='all') all
           option(value=1) 1 hour
           option(value=2) 2 hours

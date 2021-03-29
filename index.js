@@ -55,7 +55,7 @@ app.get('/', async (req, res) => {
   res.render('index', {
     title: 'ActiveTogether',
     results: groups.length,
-    groups: groups,
+    groups,
     filterDB
   })
 })
@@ -103,13 +103,10 @@ app.post('/', async (req, res) => {
     groups = groups.filter(group => { return group.duration <= req.body.duration })
   }
 
-  
-    
-
   res.render('index', {
     title: 'ActiveTogether',
     results: groups.length,
-    groups: groups,
+    groups,
     filterDB
   })
 })
