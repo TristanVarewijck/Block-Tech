@@ -55,13 +55,13 @@ article.filters-hidden
     label(for='activity') Activities
     select#activity(name='activity')
         if(filterDB)
-          option(value='all', selected=filterDB.document.activity === 'all') All
+          option(value='all', selected=filterDB.document.activity === 'all') all
           option(value='cycling', selected=filterDB.document.activity.includes('cycling')) Cycling
           option(value='walking', selected=filterDB.document.activity.includes('walking')) Walking
           option(value='jogging', selected=filterDB.document.activity.includes('jogging')) Jogging
           option(value='fishing', selected=filterDB.document.activity.includes('fishing')) Fishing
         else 
-          option(value='all') All
+          option(value='all') all
           option(value='cycling') Cycling
           option(value='walking') Walking
           option(value='jogging') Jogging
