@@ -55,14 +55,13 @@ article.filters-hidden
     label(for='activity') Activities
     select#activity(name='activity')
         if(filterDB)
-          option !{filterDB.document.activity}
-          option(value='all') all
-          option(value='cycling') Cycling
-          option(value='walking') Walking
-          option(value='jogging') Jogging
-          option(value='fishing') Fishing
+          option(value='all', selected=filterDB.document.activity === 'all') All
+          option(value='cycling', selected=filterDB.document.activity.includes('cycling')) Cycling
+          option(value='walking', selected=filterDB.document.activity.includes('walking')) Walking
+          option(value='jogging', selected=filterDB.document.activity.includes('jogging')) Jogging
+          option(value='fishing', selected=filterDB.document.activity.includes('fishing')) Fishing
         else 
-          option(value='all') all
+          option(value='all') All
           option(value='cycling') Cycling
           option(value='walking') Walking
           option(value='jogging') Jogging
@@ -71,37 +70,35 @@ article.filters-hidden
     // automatic value change, stackoverflow: https://stackoverflow.com/questions/44675522/get-the-text-value-of-a-select-created-dynamically
     
     if(filterDB)
-      input#distance(type='range', name='distance', min='0', max='50', step='10'  value="#{filterDB.document.distance}" oninput="this.nextElementSibling.value = this.value")
+      input#distance(type='range', name='distance', min='10', max='50', step='10', value=filterDB.document.distance, oninput="this.nextElementSibling.value = this.value")
       output #{filterDB.document.distance}
     else 
-      input#distance(type='range', name='distance', min='0', max='50', step='10' value="50" oninput="this.nextElementSibling.value = this.value")
+      input#distance(type='range', name='distance', min='10', max='50', step='10', value="50", oninput="this.nextElementSibling.value = this.value")
       output 50
     span km
     label(for='attendence') Attendence (max)
     select#attendence(name='attendence')
         if(filterDB)
-          option !{filterDB.document.attendence}
-          option(value='all') all
-          option(value='10 people') 10 people
-          option(value='20 people') 20 people
-          option(value='30 people') 30 people
-          option(value='40 or more people') 40 or more people
+          option(value='all', selected=filterDB.document.attendence.includes('all')) all
+          option(value='10 people', selected=filterDB.document.attendence.includes('10')) 10 people
+          option(value='20 people', selected=filterDB.document.attendence.includes('20')) 20 people
+          option(value='30 people', selected=filterDB.document.attendence.includes('30')) 30 people
+          option(value='40 or more people', selected=filterDB.document.attendence.includes('40')) 40 or more people
         else 
           option(value='all') all
           option(value='10 people') 10 people
           option(value='20 people') 20 people
           option(value='30 people') 30 people
-          option(value='40 people or more people') 40 or more people
+          option(value='40 or more people') 40 or more people
     
     label(for='duration') Duration (max)
     select#duration(name='duration')
         if(filterDB)
-          option !{filterDB.document.duration}
-          option(value='all') all
-          option(value='1 hour') 1 hour
-          option(value='2 hours') 2 hours
-          option(value='3 hours') 3 hours
-          option(value='4 hours or more') 4 hours or more
+          option(value='all', selected=filterDB.document.duration.includes('all')) all
+          option(value='1 hour', selected=filterDB.document.duration.includes('1')) 1 hour
+          option(value='2 hours', selected=filterDB.document.duration.includes('2')) 2 hours
+          option(value='3 hours', selected=filterDB.document.duration.includes('3')) 3 hours
+          option(value='4 hours or more', selected=filterDB.document.duration.includes('4')) 4 hours or more
         else 
           option(value='all') all
           option(value='1 hour') 1 hour

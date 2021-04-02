@@ -98,6 +98,7 @@ app.post('/', async (req, res) => {
     groups = groups.filter(group => { return group.duration <= req.body.duration })
   }
 
+
   res.render('index', {
     title: 'ActiveTogether',
     results: groups.length,
