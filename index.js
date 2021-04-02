@@ -69,25 +69,20 @@ app.post('/', async (req, res) => {
 
   let filterDB = {}
   filterDB = await filter.findOne({}, { sort: { _id: -1 }, limit: 1 });
-	if(await filter.countDocuments() > 0) {
+	
 		try {
 			const document = { 'activity': req.body.activity, 'distance': req.body.distance, 'attendence': req.body.attendence, 'duration': req.body.duration };
-			await filter.updateOne({}, {$set: { document }});
+      if(await filter.countDocuments() > 0) {
+         await filter.updateOne({}, {$set: { document }});
+      }
+      else{
+        await filter.insertOne({ document });
+      }
 			filterDB = await filter.findOne({}, { sort: { _id: -1 }, limit: 1 });
 		}
 		catch (error) {
 			console.error('Error:', error);
-		}}
-	else {
-		try {
-			const document = { 'activity': req.body.activity, 'distance': req.body.distance, 'attendence': req.body.attendence, 'duration': req.body.duration }
-			await filter.insertOne({ document });
-    
-			filterDB = await filter.findOne({}, { sort: { _id: -1 }, limit: 1 });
 		}
-		catch (error) {
-			console.error('Error:', error);
-    }}
 
   // filter criteria
   if (req.body.activity !== 'all') {

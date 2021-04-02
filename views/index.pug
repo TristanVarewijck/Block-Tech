@@ -30,7 +30,7 @@ main
             h2 #{group.name}
             p <ion-icon name="walk"></ion-icon>  Activity: #{group.activity} 
             p <ion-icon name="location"></ion-icon> Distance: #{group.distance} km
-            p <ion-icon name="time"></ion-icon>  Duration: #{group.duration} hour
+            p <ion-icon name="time"></ion-icon>  Duration: #{group.duration}
             p <ion-icon name="people"></ion-icon>  Attendence: 0/#{group.attendence}
             a(href='#') Join Group! 
             a(href='#') More Info
@@ -55,7 +55,7 @@ article.filters-hidden
     label(for='activity') Activities
     select#activity(name='activity')
         if(filterDB)
-          option(value='#{filterDB.document.activity}' hidden='hidden') !{filterDB.document.activity}
+          option !{filterDB.document.activity}
           option(value='all') all
           option(value='cycling') Cycling
           option(value='walking') Walking
@@ -71,43 +71,43 @@ article.filters-hidden
     // automatic value change, stackoverflow: https://stackoverflow.com/questions/44675522/get-the-text-value-of-a-select-created-dynamically
     
     if(filterDB)
-      input#distance(type='range', name='distance', min='0', max='50', step='10' value='#{filterDB.document.distance}' oninput="this.nextElementSibling.value = this.value")
+      input#distance(type='range', name='distance', min='0', max='50', step='10'  value="#{filterDB.document.distance}" oninput="this.nextElementSibling.value = this.value")
       output #{filterDB.document.distance}
     else 
-      input#distance(type='range', name='distance', min='0', max='50', step='10' value='50' oninput="this.nextElementSibling.value = this.value")
+      input#distance(type='range', name='distance', min='0', max='50', step='10' value="50" oninput="this.nextElementSibling.value = this.value")
       output 50
     span km
     label(for='attendence') Attendence (max)
     select#attendence(name='attendence')
         if(filterDB)
-          option(value='#{filterDB.document.attendence}' hidden='hidden') !{filterDB.document.attendence}
+          option !{filterDB.document.attendence}
           option(value='all') all
-          option(value=10) 10 people
-          option(value=20) 20 people
-          option(value=30) 30 people
-          option(value=40) 40 or more people
+          option(value='10 people') 10 people
+          option(value='20 people') 20 people
+          option(value='30 people') 30 people
+          option(value='40 or more people') 40 or more people
         else 
           option(value='all') all
-          option(value=10) 10 people
-          option(value=20) 20 people
-          option(value=30) 30 people
-          option(value=40) 40 or more people
+          option(value='10 people') 10 people
+          option(value='20 people') 20 people
+          option(value='30 people') 30 people
+          option(value='40 people or more people') 40 or more people
     
     label(for='duration') Duration (max)
     select#duration(name='duration')
         if(filterDB)
-          option(value='#{filterDB.document.duration}' hidden='hidden') !{filterDB.document.duration}
+          option !{filterDB.document.duration}
           option(value='all') all
-          option(value=1) 1 hour
-          option(value=2) 2 hours
-          option(value=3) 3 hours
-          option(value=4) 4 hours or more
+          option(value='1 hour') 1 hour
+          option(value='2 hours') 2 hours
+          option(value='3 hours') 3 hours
+          option(value='4 hours or more') 4 hours or more
         else 
           option(value='all') all
-          option(value=1) 1 hour
-          option(value=2) 2 hours
-          option(value=3) 3 hours
-          option(value=4) 4 hours or more
+          option(value='1 hour') 1 hour
+          option(value='2 hours') 2 hours
+          option(value='3 hours') 3 hours
+          option(value='4 hours or more') 4 hours or more
     input(type='submit' value='FILTER')
 
 script(src='/scripts/app.js')
