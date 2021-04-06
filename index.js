@@ -4,11 +4,11 @@ const bodyParser = require('body-parser')
 const app = express()
 require('dotenv').config()
 const { MongoClient } = require('mongodb')
-let PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
 // Mongo connection
 let db = null
-let filter;
+let filter
 // funciton connectDB
 async function connectDB() {
   // get URL from .env file
